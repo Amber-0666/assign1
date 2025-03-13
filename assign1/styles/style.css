@@ -45,7 +45,7 @@ body {
 .menu li a {
     color: brown;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px;
     transition: background 0.3s ease;
 }
@@ -53,6 +53,7 @@ body {
 .menu li a:hover {
     background-color:#f8e5cb; 
     border-radius: 4px;
+    transition:0.2s; 
 }
 
 .dropdown-content {
@@ -74,7 +75,8 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color:#f8e5cb; 
+    background-color:#f8e5cb;
+    transition:0.2s; 
 }
 
 .dropdown:hover .dropdown-content {
@@ -123,13 +125,13 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size:70px;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 70px;
 }
 
 .hero-content .btn {
@@ -138,8 +140,9 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 25px;
     transition: background 0.3s ease;
+    font-weight:bold;
 }
 
 .hero-content .btn:hover {
@@ -198,7 +201,6 @@ footer {
 footer a {
     color:brown; 
     text-decoration: none;
-    margin-left:20px;
 }
 
 footer a:hover {
