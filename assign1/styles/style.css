@@ -7,28 +7,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #2c3e50; /* Dark text color */
+    color: #2c3e50; 
     line-height: 1.6;
 }
 
-/* Navbar Styles */
 .navbar {
     width: 100%;
-    background-color: #3498db; /* Sea blue */
+    background-color: #e7cdab;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Fix navbar at the top */
+    position: fixed; 
     top: 0;
     z-index: 1000;
+    font-weight:bold;
 }
 
 .logo a {
-    color: #f4f1ea; /* Beige text */
-    font-size: 24px;
+    color: brown; 
+    font-size: 40px;
     font-weight: bold;
     text-decoration: none;
+    font-family:'Times New Roman';
 }
 
 .menu {
@@ -42,7 +43,7 @@ body {
 }
 
 .menu li a {
-    color: #f4f1ea; /* Beige text */
+    color: brown;
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
@@ -50,37 +51,36 @@ body {
 }
 
 .menu li a:hover {
-    background-color: #2980b9; /* Darker sea blue */
+    background-color:#f8e5cb; 
     border-radius: 4px;
 }
 
-/* Dropdown Menu Styles */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #3498db; /* Sea blue */
+    background-color:#e7cdab; 
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 4px;
+    font-weight:normal;
 }
 
 .dropdown-content a {
-    color: #f4f1ea; /* Beige text */
+    color: brown; 
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #2980b9; /* Darker sea blue */
+    background-color:#f8e5cb; 
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Search Bar Styles */
 .search-bar {
     display: flex;
     align-items: center;
@@ -96,8 +96,8 @@ body {
 
 .search-bar button {
     padding: 8px 12px;
-    background-color: #2980b9; /* Darker sea blue */
-    color: #f4f1ea; /* Beige text */
+    background-color:#f8e5cb; 
+    color: brown; 
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -105,20 +105,100 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #3498db; /* Sea blue */
+    background-color: #e7cdab; 
 }
 
-/* Footer Styles */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(243,184,153, 0.3),rgba(243,184,153, 0.3)),url('images/background.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    image-rendering: crisp-edges; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:rgb(243, 229, 213); 
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    background-color:#e7cdab; 
+    color: Brown; 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color:#f8e5cb; 
+}
+
+.about {
+    height: 100vh;
+    background-image: url('coffee-bg2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:brown; 
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+}
+
+.activities {
+    height: 100vh;
+    background-image: url('coffee-bg3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:brown; /* Beige text */
+}
+
+.activities-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.activities-content p {
+    font-size: 18px;
+}
+
 footer {
-    background-color: #3498db; /* Sea blue */
-    color: #f4f1ea; /* Beige text */
+    background-color:#e7cdab; 
+    color: brown; 
     text-align: center;
     padding: 20px 0;
 }
 
 footer a {
-    color: #f4f1ea; /* Beige text */
+    color:brown; 
     text-decoration: none;
+    margin-left:20px;
 }
 
 footer a:hover {
