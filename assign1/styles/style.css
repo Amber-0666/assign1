@@ -135,7 +135,7 @@ body {
 
 .about {
     height: 100vh;
-    background-image: url('coffee-bg2.jpg'); 
+    background-color: #f8e5cb;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -143,6 +143,8 @@ body {
     align-items: center;
     text-align: center;
     color:brown; 
+    padding-top:200px;
+    padding-bottom: 80px;
 }
 
 .about-content h2 {
@@ -155,46 +157,79 @@ body {
     padding:10px;
 }
 
-.container{
-    width:350px;
-    height:500px;
+.container {
+    display: grid;
+    width: 90%;
+    margin: 40px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
 }
 
-.container:hover > .card{
-    transform: rotateY(180deg);
-    cursor:pointer;
-    perspective: 800px;
+.container1 {
+    position: relative;
+    width: 100%; 
+    height: 500px;
 }
 
-.card{
-    height:100%;
-    width:100%;
-    position:relative;
-    transition:transform 1500ms;
-    transform-style: preserve-3d;
-    padding:20px;
-}
-
-.front-card,
-.back-card{
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width:100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
-    position:absolute;
-    justify-content:center;
-    align-items:center;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Hide the back face */
+    transition: transform 1500ms;/* Smooth transition */
+    border-radius: 10px;
+    padding-bottom:20px;
 }
 
-.back-card{
-    background-color: #f8e5cb;
-    transform: rotateY(180deg);
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+.front {
+     transform: rotateY(0deg); /* Initial state */
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+.front h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 24px;
     align-items: center;
-    padding:20px;
+}
+
+.back {
+    background:#e7cdab;
+    color: brown;
+    padding: 15px;
+    transform: rotateY(180deg); 
+}
+
+.container1:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.container1:hover .back {
+    transform: rotateY(0deg);
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .location{
@@ -203,6 +238,7 @@ body {
     text-align: center;
     padding:10px;
     font-size:30px;
+    padding-top: 80px;
 }
 
 .row{
