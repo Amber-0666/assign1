@@ -110,3 +110,11 @@ body {
 .search-bar button:hover {
     background-color: #e7cdab; 
 }
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:  110vh;
+    background: #f8e5cb
+}
