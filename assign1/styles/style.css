@@ -152,6 +152,7 @@ body {
 
 .about-content p {
     font-size: 18px;
+    padding:10px;
 }
 
 .location{
@@ -182,12 +183,12 @@ body {
 .text-in-picture{
     background-color: #e7cdab;
     font-weight:bold;
-    font-size:20px;
+    font-size:30px;
 }
 
 .layer{
     background: transparent;
-    height:97%;
+    height:100%;
     width:100%;
     position:absolute;
     top:0;
