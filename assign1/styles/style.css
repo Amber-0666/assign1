@@ -258,10 +258,7 @@ body {
     position:absolute;
     top:0;
     left:0;
-}
-
-.layer:hover{
-    background: rgba(231,205,171,0.5);
+    pointer-events: none;
 }
 
 footer {
