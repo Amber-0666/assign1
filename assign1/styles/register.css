@@ -84,33 +84,6 @@ body {
     display: block;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    font-size: 14px;
-}
-
-.search-bar button {
-    padding: 8px 12px;
-    background-color:#f8e5cb; 
-    color: #a52a2a; 
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.search-bar button:hover {
-    background-color: #e7cdab; 
-}
-
 body {
     display: flex;
     flex-direction: row;
