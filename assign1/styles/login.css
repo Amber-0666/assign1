@@ -84,12 +84,9 @@ body {
     font-weight:bold;
 }
 
-.logo a {
-    color: #a52a2a; 
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    font-family:'Times New Roman';
+.logo img {
+    width:70px;
+    height:70px;
 }
 
 .menu {
