@@ -41,43 +41,46 @@
         </ul>
     </nav>
 
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-            </div>
+    <div class="Container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                </div>
 
-            <div class="card-back">
+                <div class="card-back">
+                </div>
             </div>
         </div>
+
+        <div class= "wrapper">
+            <form action= "">
+                <h1> Login </h1>
+                <hr>
+                <div class= "input-box">
+                    <input type="text" maxlength="10" pattern="[A-Za-z]+" required placeholder="Enter login ID" title="Max 10 characters, letters only (A-Z, a-z)">
+                    <i class='bx bxs-user'></i>
+                </div>
+                
+                <div class= "input-box">
+                    <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Enter password" title="Max 25 characters, letters only (A-Z, a-z)">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                
+
+                <div class= "remember-forgot">
+                    <label><input type= "checkbox"> Remember me</label>
+                    <a href= "#"> Forget password? </a>
+                </div>
+
+                <button type= "submit" class= "btn"> Login </button>
+
+                <div class= "register-link">
+                    <p> Don't have an account? <a href= "registration.html"> Register </a></p>
+                </div>
+            </form>
+        </div>
     </div>
-
-    <div class= "wrapper">
-        <form action= "">
-            <h1> Login </h1>
-            <hr>
-            <div class= "input-box">
-                <input type="text" maxlength="10" pattern="[A-Za-z]+" required placeholder="Enter login ID" title="Max 10 characters, letters only (A-Z, a-z)">
-                <i class='bx bxs-user'></i>
-            </div>
-            
-            <div class= "input-box">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Enter password" title="Max 25 characters, letters only (A-Z, a-z)">
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            
-
-            <div class= "remember-forgot">
-                <label><input type= "checkbox"> Remember me</label>
-                <a href= "#"> Forget password? </a>
-            </div>
-
-            <button type= "submit" class= "btn"> Login </button>
-
-            <div class= "register-link">
-                <p> Don't have an account? <a href= "registration.html"> Register </a></p>
-            </div>
-        </form>
-    </div>
+    
 </body>
 
 <footer>
