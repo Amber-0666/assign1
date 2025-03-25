@@ -1,23 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
 }
 
+html, body {
+    height: 100%; 
+}
+
 body {
-    font-family: "Arial", sans-serif;
     color: #f8e5cb;
     line-height: 1.6;
     display: flex;
-    justify-content: center;
+    flex-direction: column;  
+    justify-content: flex-start;  
     align-items: center;
-    min-height: 100vh;
-    background: url(images/backgroundregister1.avif);
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: #f8e5cb;
     position: relative;
+}
+
+
+.main-content {
+    flex: 1; 
+    width: 100%;
 }
 
 .navbar {
@@ -27,16 +33,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .logo img {
-    width:70px;
-    height:70px;
+    width: 70px;
+    height: 70px;
 }
 
 .menu {
@@ -58,61 +64,51 @@ body {
 }
 
 .menu li a:hover {
-    background-color:#f8e5cb; 
+    background-color: #f8e5cb;
     border-radius: 4px;
-    transition:0.2s; 
+    transition: 0.2s;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:#e7cdab; 
+    background-color: #e7cdab;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 4px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .dropdown-content a {
-    color: #a52a2a; 
+    color: #a52a2a;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color:#f8e5cb;
-    transition:0.2s; 
+    background-color: #f8e5cb;
+    transition: 0.2s;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-body{
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url(images/backgroundregister1.avif);
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.container{
+.container {
     width: 450px;
     background-color: rgba(175, 175, 175, 0.218);
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
-    color: #f8e5cb;
+    color: #000000;
     border-radius: 15px;
     padding: 30px 40px;
     margin-top: 120px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-.container h1{
+.container h1 {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -122,31 +118,31 @@ body{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
 }
 
-.container .from-input{
+.container .from-input {
     position: relative;
     width: 100%;
     height: 45px;
     margin: 25px 0;
 }
 
-.from-input input{
+.from-input input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     font-size: 18px;
-    color: #000000;
+    color: #000;
     padding: 20px 45px 20px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.356);
 }
 
-.from-input input::placeholder{
-    color: #000000;
+.from-input input::placeholder {
+    color: #000;
     font-style: italic;
 }
 
-.from-input i{
+.from-input i {
     position: absolute;
     right: 15px;
     top: 35%;
@@ -154,10 +150,10 @@ body{
     color: #842121;
 }
 
-.container .btn{
+.container .btn {
     width: 100%;
     height: 50px;
-    background: white; 
+    background: white;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -169,7 +165,7 @@ body{
     box-shadow: 0 4px 10px rgba(63, 63, 63, 0.319);
 }
 
-.container .btn:hover{
+.container .btn:hover {
     transform: scale(1.05);
     background: #a52a2a81;
 }
@@ -195,23 +191,20 @@ hr {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    text-align: center;
-    background-color:#e7cdab; 
-    color: brown; 
+    background-color: #e7cdab;
+    color: brown;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    bottom: 0;
 }
 
 footer a {
-    color:brown; 
+    color: brown;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-} 
-
+}
