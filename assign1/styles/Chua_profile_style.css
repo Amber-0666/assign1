@@ -1,11 +1,11 @@
-body {
+.profile-body {
     background-color: #e7cdab;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
     text-align: center;
 }
 
-.container {
+.profile-container {
     width: 60%;
     margin: auto;
     background-color: #f8e5cb;
@@ -14,7 +14,7 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.profile-h1 {
     font-size: 200%;
     font-weight: bold;
 }
@@ -28,36 +28,40 @@ h1 {
     margin: 20px auto;
     padding: 20px;
 }
-table {
+.profile-table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
+    border: 1px solid brown;
 }
 
-th, td {
-    border: 1px solid black;
+.profile-th, .profile-td {
+    border: 1px solid brown;
     padding: 10px;
+    
 }
 
-th {
+.profile-th {
     background-color: #f8e5cb;
     font-weight: bold;
-}
-
-td {
+    width:20%;
     text-align: center;
 }
 
-a {
+.profile-td {
+    text-align: left;
+}
+
+.profile-td a {
     color: rgb(165, 42, 42);
     text-decoration: none;
 }
 
-a:hover {
+.profile-td a:hover {
     text-decoration: underline;
 }
 
-footer {
+.profile-footer {
     margin-top: 20px;
 }
 
