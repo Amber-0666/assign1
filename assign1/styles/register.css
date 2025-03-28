@@ -17,6 +17,7 @@ body {
     justify-content: flex-start;  
     align-items: center;
     background-color: #f8e5cb;
+    background: url(images/backgroundregister1.jpg) no-repeat center center/cover;
     position: relative;
 }
 
