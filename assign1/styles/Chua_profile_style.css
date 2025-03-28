@@ -42,11 +42,11 @@ th, td {
 th {
     background-color: #f8e5cb;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
 
 td {
-    text-align: left;
+    text-align: center;
 }
 
 a {
