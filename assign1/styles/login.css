@@ -296,7 +296,7 @@ hr {
 
 .footer_container{
     max-width: 1170px;
-    max-height: 250px;
+    max-height: 430px;
     margin: auto;
 }
 
@@ -308,6 +308,7 @@ hr {
 }
 
 .footer_container img{
+   margin-top: -8%;
     width: 15%;
     height: 15%;
 }
@@ -394,20 +395,6 @@ footer {
     border-radius: 50%;
     color: brown;
     transition: all 0.5s;
-}
-
-@media (max-width: 768px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 574px) {
-    .footer-col {
-        width: 100%;
-
-    }
 }
 
 .social-links a:hover {
