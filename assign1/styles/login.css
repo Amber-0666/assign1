@@ -300,7 +300,7 @@ hr {
     margin: auto;
 }
 
-.row {
+.footer_row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -313,7 +313,7 @@ hr {
     height: 15%;
 }
 
-ul{
+footer_ul{
     list-style: none;
 }
 
@@ -397,17 +397,17 @@ footer {
     transition: all 0.5s;
 }
 
-.social-links a:hover {
+.footer-social-links a:hover {
     background-color: #a52a2a;
     color: #fff;
 }
 
-.whatsapp a:hover {
+.footer-whatsapp a:hover {
     background-color: #a52a2a;
     color: #fff;
 }
 
-h4 a:hover{
+footer-h4 a:hover{
     color: #ff0000;
 }
 

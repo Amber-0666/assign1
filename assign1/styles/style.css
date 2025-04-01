@@ -268,24 +268,6 @@
 /* top:0;
     left:0; */
 
-footer {
-    background-color:#e7cdab; 
-    color: brown; 
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color:brown; 
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-
-
 
 
 /* Profile Page Styles */
@@ -352,11 +334,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.profile-footer {
-    margin-top: 20px;
-    background-color: none;
-}
-
 .profile-button {
     background: #e7cdab;
     color:brown;
@@ -365,10 +342,171 @@ footer a:hover {
     border-radius: 15px;
     font-weight:bold;
     font-size: 20px;
+    margin: 20px;
 }
 
 .profile-button:hover{
     cursor: pointer;
 }
-
 /* End of Profile CSS file */
+
+
+
+/* Footer styles */
+.footer_container{
+    max-width: 1170px;
+    max-height: 250px;
+    margin: auto;
+}
+
+.footer_row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer_container img{
+    width: 15%;
+    height: 15%;
+}
+
+.footer_ul{
+    list-style: none;
+}
+
+.footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e7cdab;
+    background-size: contain;
+    background-position: 0%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    size: 100%;
+    background-color: #e7cdab;
+    color: brown;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 10px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    color: brown;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: brown;
+    height: 0.8px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: brown;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ff0000;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: brown;
+    transition: all 0.5s;
+}
+
+.footer-col .whatsapp a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: brown;
+    transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+
+    }
+}
+
+.footer-social-links a:hover {
+    background-color: #a52a2a;
+    color: #fff;
+}
+
+.footer-whatsapp a:hover {
+    background-color: #a52a2a;
+    color: #fff;
+}
+
+.footer-h4 a:hover{
+    color: #ff0000;
+}
+
+.footer a {
+    color: brown;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* End of Footer CSS file */
