@@ -296,11 +296,11 @@ hr {
 
 .footer_container{
     max-width: 1170px;
-    max-height: 250px;
+    max-height: 430px;
     margin: auto;
 }
 
-.footer_row {
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -308,11 +308,12 @@ hr {
 }
 
 .footer_container img{
+   margin-top: -8%;
     width: 15%;
     height: 15%;
 }
 
-footer_ul{
+ul{
     list-style: none;
 }
 
@@ -396,31 +397,17 @@ footer {
     transition: all 0.5s;
 }
 
-@media (max-width: 768px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 574px) {
-    .footer-col {
-        width: 100%;
-
-    }
-}
-
-.footer-social-links a:hover {
+.social-links a:hover {
     background-color: #a52a2a;
     color: #fff;
 }
 
-.footer-whatsapp a:hover {
+.whatsapp a:hover {
     background-color: #a52a2a;
     color: #fff;
 }
 
-footer-h4 a:hover{
+h4 a:hover{
     color: #ff0000;
 }
 

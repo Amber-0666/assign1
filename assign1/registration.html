@@ -37,7 +37,7 @@
 
             <li><a href="#">JOIN US</a></li>                
             <li><a href="#">ENQUIRY FORM</a></li>
-            <li><a href="#">MEMBERSHIP REGISTRATION</a></li>
+            <li><a href="registration.html">MEMBERSHIP REGISTRATION</a></li>
             <li><a href="login.html">LOGIN</a></li>  
         </ul>
 
@@ -45,51 +45,112 @@
 
     <div class= "container">
         <form action= "">
-            <h1> Member Registration </h1>
-            <hr>
+            <h1> MEMBER REGISTRATION </h1>
             <div class= "from-input">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Firstname" title="Max 25 characters, letters only (A-Z, a-z)">
+                <input type="text" maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
+                <div class="labelline">Firstname</div>
                 <i class='bx bxs-user'></i>
             </div>
 
             <div class= "from-input">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Lastname" title="Max 25 characters, letters only (A-Z, a-z)">
+                <input type="text" required maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
+                <div class="labelline">Lastname</div>
                 <i class='bx bxs-user'></i>
             </div>
 
             <div class="from-input">
                 <form action="https://example.com/submit" method="post">
-                    <input type="email" name="email" placeholder="Email address" required>
+                    <input type="text" name="email" required>
                 </form>
+                <div class="labelline">Email Address</div>
                 <i class='bx bx-envelope' ></i>
             </div>
 
             <div class= "from-input">
-                <input type="text" pattern="[A-Za-z]+" required placeholder="Enter login ID" title="Max 10 characters, letters only (A-Z, a-z)">
+                <input type="text" pattern="[A-Za-z]+" title="Max 10 characters, letters only (A-Z, a-z)" required>
+                <div class="labelline">Login ID</div>
                 <i class='bx bx-log-in-circle' ></i>
             </div>
             
             <div class= "from-input">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Enter password" title="Max 25 characters, letters only (A-Z, a-z)">
+                <input type="text" maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
+                <div class="labelline">Password</div>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
             <button type= "submit" class= "btn"> Register Now</button>
 
             <div class= "login-link">
-                <p> Already have an account? <a href= "login.html"> Login </a></p>
+                <br><p> Already have an account? <a href= "login.html"> Login </a></p>
             </div>
         </form>
 
     </div>
 </body>
+
 <br>
-<footer>
-    <p>Product by:</p>
-    <p><a href="Amberlyn_profile.html">Amberlyn</a></p>
-    <p><a href="Roxas_profile.html">Roxas</a></p>
-    <p><a href="Chua_profile.html">Yong Kang</a></p>
-    <p><a href="Michelle_profile.html">Michelle</a></p>
+<footer class="footer">
+    <div class="footer_container">
+        <div class="row">
+            <div class="footer_logo">
+                <a href="index.html"><img src="styles/images/logo.png"></a>
+            </div>
+
+            <div class="footer-col">
+                <h4><strong>TEAM</strong></h4>
+                <ul>
+                    <li><a href="Amberlyn_profile.html">Amberlyn Lim Xi En</a></li>
+                    <li><a href="Roxas_profile.html">Roxas Teo Xuan Hao</a></li>
+                    <li><a href="Chua_profile.html">Chua Yong Kang</a></li>
+                    <li><a href="Michelle_profile.html">Michelle Tan Mei Xuan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4><strong>PRODUCTS</strong></h4>
+                <ul>
+                    <li><a href="#">Basic Brew</a></li>
+                    <li><a href="#">Artisan Brew</a></li>
+                    <li><a href="#">Non-Coffee</a></li>
+                    <li><a href="#">Hot Beverages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4><strong>ACTIVITIES</strong></h4>
+                <ul>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Current Activities</a></li>
+                    <li><a href="#">Past Activities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4><a href="#"><strong>JOIN US</strong></a></h4>
+                <h4><a href="#"><strong>ENQUIRY FORM</strong></a></h4>
+                <h4><a href="registration.html"><strong>MEMBERSHIP REGISTRATION</strong></a></h4>
+                <h4><a href="login.html"><strong>LOGIN</strong></a></h4>
+            </div>
+
+            <div class="footer-col">
+                <h4><strong>FOLLOW US</strong></h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18M9JEQBPr/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/brewngo.coffee/"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4><strong>CONTACT US FOR ORDER!</strong></h4>
+                <div class="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=601116531886&text=Hello%2C%20I%20want%20to%20pre-order%20%F0%9F%98%84%0ADate%
+                3A%20%0A%0A1.%20Order%3A%20%0A-%20%0A-%0A%0A2.%20Pick-up%2FDelivery%0APick-up%20Point%20%F0%9F%9B%8D%EF%B8%8F%20%0A%5B%20%
+                5D%20Old%20KPJ%20Hospital%20(opposite%20stutong%20market)%0A%0ADelivery%20%F0%9F%9A%99%20%0A%5B%20%5D%20Jalan%20Song%0A%5B%
+                20%5D%20BDC%20%0A%5B%20%5D%20101%20%0A%5B%20%5D%20Tabuan%20Area%20%0A%5B%20%5D%20Swinburne%20%0A%0A3.%20Time%20%E2%8F%B0%20
+                %0A%5B%20%5D%2011.30am%20%0A%5B%20%5D%2012.30pm%20%0A%5B%20%5D%201.30pm%20%0A%5B%20%5D%202.30pm%20%0A%5B%20%5D%203.30pm%20%
+                0A%5B%20%5D%204pm%20(last%20order)"><i class='bx bx-mobile'></i></a>
+            </div>
+        </div>
+    </div>
 </footer>
 
 </html>
