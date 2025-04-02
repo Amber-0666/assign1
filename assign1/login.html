@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 
-<body>
+<body class="login-body">
     <nav class="navbar">
         <div class="logo">
             <a href="index.html"><img src="styles/images/logo.png"></a>
@@ -41,40 +41,40 @@
         </ul>
     </nav>
 
-    <div class="Container">
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
+    <div class="login-Container">
+        <div class="login-card">
+            <div class="login-card-inner">
+                <div class="login-card-front">
                 </div>
 
-                <div class="card-back">
+                <div class="login-card-back">
                 </div>
             </div>
         </div>
 
-        <div class= "wrapper">
+        <div class= "login-wrapper">
             <form action= "">
                 <h1> Login </h1>
-                <hr>
-                <div class= "input-box">
+                <hr class="login-hr">
+                <div class= "login-input-box">
                     <input type="text" maxlength="10" pattern="[A-Za-z]+" required placeholder="Enter login ID" title="Max 10 characters, letters only (A-Z, a-z)">
                     <i class='bx bxs-user'></i>
                 </div>
                 
-                <div class= "input-box">
+                <div class= "login-input-box">
                     <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Enter password" title="Max 25 characters, letters only (A-Z, a-z)">
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 
 
-                <div class= "remember-forgot">
+                <div class= "login-remember-forgot">
                     <label><input type= "checkbox"> Remember me</label>
                     <a href= "#"> Forget password? </a>
                 </div>
 
-                <button type= "submit" class= "btn"> Login </button>
+                <button type= "submit" class= "login-btn"> Login </button>
 
-                <div class= "register-link">
+                <div class= "login-register-link">
                     <p> Don't have an account? <a href= "registration.html"> Register </a></p>
                 </div>
             </form>

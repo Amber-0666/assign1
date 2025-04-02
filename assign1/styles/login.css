@@ -6,7 +6,7 @@
 
 }
 
-body {
+.login-body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-.Container {
+.login-Container {
     margin-left: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -28,13 +28,13 @@ body {
     margin-top: 100px;
 }
 
-.card {
+.login-card {
     width: 650px;
     height: 500px;
     perspective: 1000px;
 }
 
-.card-inner {
+.login-card-inner {
     width: 100%;
     height: 100%;
     position: relative;
@@ -42,11 +42,11 @@ body {
     transition: transform 1s;
 }
 
-.card:hover .card-inner {
+.login-card:hover .login-card-inner {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.login-card-front, .login-card-back {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -59,13 +59,13 @@ body {
     border: 5px solid rgba(255, 255, 255, 255);
 }
 
-.card-front {
+.login-card-front {
     background: url(images/Backgroundlogin2.png);
     background-position: 80%;
     color: #ffff;
 }
 
-.card-back {
+.login-card-back {
     background: url(images/Backgroundlogin1.png);
     background-position: 50%;
     transform: rotateY(180deg);
@@ -142,7 +142,7 @@ body {
     display: block;
 }
 
-.wrapper {
+.login-wrapper {
     position: relative;
     right: -3%;
     width: 450px;
@@ -163,20 +163,20 @@ hr {
     background: linear-gradient(to right, #a52a2a, rgb(255, 255, 255));
 }
 
-.wrapper h1 {
+.login-wrapper h1 {
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
-.wrapper .input-box {
+.login-wrapper .login-input-box {
     width: 100%;
     height: 50px;
     margin: 35px 0;
 }
 
-.input-box input {
+.login-input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -190,11 +190,11 @@ hr {
     /*transition: 0.3s ease-in-out;*/
 }
 
-.input-box input::placeholder {
+.login-input-box input::placeholder {
     color: #a52a2a;
 }
 
-.input-box {
+.login-input-box {
     position: relative;
     display: flex; 
     align-items: center;
@@ -204,7 +204,7 @@ hr {
     /*transition: 0.3s;*/
 }
 
-.input-box input {
+.login-input-box input {
     width: 100%;
     padding: 10px;
     border: none;
@@ -215,7 +215,7 @@ hr {
     /*transition: 0.3s;*/
 }
 
-.input-box i {
+.login-input-box i {
     position: absolute;
     right: 15px;
     font-size: 18px;
@@ -224,34 +224,34 @@ hr {
     /*transition: 0.3s;*/
 }
 
-.input-box i:hover {
+.login-input-box i:hover {
     color: #ccc;
 }
 
-.wrapper .remember-forgot {
+.login-wrapper .login-remember-forgot {
     display: flex; 
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
 
-.remember-forgot label input {
+.login-remember-forgot label input {
     accent-color: #a52a2a;
     margin-right: px;
 }
 
-.remember-forgot a {
+.login-remember-forgot a {
     color: #a52a2a;
     text-decoration: none;
     /*transition: 0.3s;*/
 }
 
-.remember-forgot a:hover {
+.login-remember-forgot a:hover {
     text-decoration: underline;
     color: #ff0000;
 }
 
-.wrapper .btn {
+.login-wrapper .login-btn {
     width: 100%;
     height: 45px;
     background: #ffff;
@@ -265,29 +265,29 @@ hr {
     /*transition: 0.3s;*/
 }
 
-.wrapper .btn:hover {
+.login-wrapper .login-btn:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px #a52a2a;
 }
 
-.wrapper .btn:active {
+.login-wrapper .login-btn:active {
     transform: scale(0.96);
     box-shadow: 0 0 10px #a52a2a;
 }
 
-.wrapper .register-link {
+.login-wrapper .login-register-link {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
 }
 
-.register-link p a {
+.login-register-link p a {
     color: #a52a2a;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover {
+.login-register-link p a:hover {
     text-decoration: underline;
     color: #ff0000;
 }
