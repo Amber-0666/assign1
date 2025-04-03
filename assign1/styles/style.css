@@ -565,3 +565,25 @@
 }
   
 /* End of Pass Activities file */
+
+
+
+/* Current Activities CSS file */
+.current-body {
+    background-color: #e7cdab;
+    font-family: Arial, sans-serif;
+    color: rgb(165, 42, 42);
+    text-align: center;
+}
+/* End of Current Activities CSS file */
+
+
+
+/* Coming Soon CSS file */
+.coming_soon-body {
+    background-color: #e7cdab;
+    font-family: Arial, sans-serif;
+    color: rgb(165, 42, 42);
+    text-align: center;
+}
+/* End of Coming Soon CSS file */
