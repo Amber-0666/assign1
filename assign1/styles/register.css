@@ -137,14 +137,12 @@ h1 {
     padding: 0 25px;
     margin: 0 20px;
     transition: 0.2s ease;
-    z-index: 1111;
 }
 
 input:focus,
 input:valid{
     color: #a52a2a;
     border: 4px solid #a52a2a;
-    z-index: 1111;
 }
 
 input:focus + .register-labelline,
@@ -154,7 +152,6 @@ input:valid + .register-labelline{
     line-height: 30px;
     padding: 0 12px;
     transform: translate(-15px, -50px) scale(0.88);
-    z-index: 1111;
 }
 
 .register-from-input input {
@@ -222,7 +219,7 @@ a{
 
 .footer_container{
     max-width: 1170px;
-    max-height: 430px;
+    max-height: 800px;
     margin: auto;
 }
 
@@ -234,7 +231,6 @@ a{
 }
 
 .footer_container img{
-   margin-top: -8%;
     width: 15%;
     height: 15%;
 }
