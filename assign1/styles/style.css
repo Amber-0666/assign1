@@ -134,6 +134,7 @@
     text-align: center;
     color:brown; 
     padding-top:80px;
+    box-sizing: none;
 }
 
 .index-about-content h2 {
@@ -147,7 +148,7 @@
 }
 
 .index-container {
-    display: grid;
+    display: flex;
     width: 90%;
     margin: 40px auto;
     grid-template-columns: repeat(2, 1fr);
