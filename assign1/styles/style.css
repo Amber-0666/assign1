@@ -134,6 +134,7 @@
     text-align: center;
     color:brown; 
     padding-top:80px;
+    box-sizing: none;
 }
 
 .index-about-content h2 {
@@ -147,7 +148,7 @@
 }
 
 .index-container {
-    display: grid;
+    display: flex;
     width: 90%;
     margin: 40px auto;
     grid-template-columns: repeat(2, 1fr);
@@ -712,7 +713,6 @@ a{
 
 
 /* Footer styles */
-
 .footer_container{
     max-width: 1170px;
     max-height: 800px;
@@ -837,14 +837,17 @@ footer a:hover {
 
 
 /* Pass Activities CSS file */
-.pass-body {
+.past-body {
     background-color: #e7cdab;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
-    text-align: center;
 }
 
-.pass-h1 {
+.past-body-text {
+    text-align: center;;
+}
+
+.past-h1 {
     font-size: 200%;
     font-weight: bold;
     margin-top: 20px;
@@ -896,6 +899,9 @@ footer a:hover {
     background-color: #e7cdab;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
+}
+
+.current-body-text {
     text-align: center;
 }
 /* End of Current Activities CSS file */
@@ -907,6 +913,9 @@ footer a:hover {
     background-color: #e7cdab;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
+}
+
+.coming_soon-body-text {
     text-align: center;
 }
 /* End of Coming Soon CSS file */
