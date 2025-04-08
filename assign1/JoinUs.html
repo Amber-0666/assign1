@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry Form | Coffee Community</title>
-    <link rel="stylesheet" href="Enquiry_style.css">
+    <title>Join Our Team | Coffee Community</title>
+    <link rel="stylesheet" href="style_joinus.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -37,20 +37,23 @@
        </ul>
     </nav>
 
-
     <header>
         <div class="header-content">
-            <h1>Customer Enquiry</h1>
-            <p class="subtitle">We're here to help with any questions about our products, services, or activities</p>
+            <h1>Join Our Coffee Community</h1>
+            <p class="subtitle">Be part of our passionate team and start your journey in the world of specialty coffee</p>
         </div>
     </header>
 
     <main>
         <div class="content-container">
-            <div class="form-container enquiry-form">
-                <h2>Enquiry Form</h2>
+            <div class="image-left"> 
+                <img src="brew1.png" alt="Coffee preparation">
+            </div>
+
+            <div class="form-container">
+                <h2>Application Form</h2>
                 
-                <form id="enquiry-form">
+                <form id="join-form">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="form-col">
@@ -141,38 +144,57 @@
 
                         <div class="form-row">
                             <div class="form-col">
-                                <label for="enquiry-type">Enquiry Type*</label>
-                                <select id="enquiry-type" name="enquiry-type" required>
-                                    <option value="">Select Enquiry Type</option>
-                                    <option value="Membership">Membership</option>
-                                    <option value="Products">Products</option>
-                                    <option value="Pop-up Market activities">Pop-up Market activities</option>
-                                </select>
+                                <label for="cv">Upload CV (PDF only)*</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                                    <span class="file-upload-btn">Choose File</span>
+                                    <span class="file-name">No file chosen</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="form-row">
                             <div class="form-col">
-                                <label for="message">Your Message*</label>
-                                <textarea id="message" name="message" required 
-                                          placeholder="Please provide details about your enquiry"
-                                          rows="5"></textarea>
+                                <label for="photo">Upload Photo (Max 200KB)</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="photo" name="photo" accept="image/*">
+                                    <span class="file-upload-btn">Choose File</span>
+                                    <span class="file-name">No file chosen</span>
+                                </div>
                             </div>
                         </div>
 
                         <div class="form-footer">
                             <button type="submit" class="submit-btn">
-                                Submit Enquiry
+                                Submit Application
                             </button>
-                            <p class="form-note">* Required fields. We'll respond to your enquiry within 2 business days.</p>
+                            <p class="form-note">* Required fields. We respect your privacy and will never share your information with third parties.</p>
                         </div>
                     </div>
                 </form>
             </div>
+
+            
         </div>
     </main>
 
-    <footer>
+    <script>
+        // Simple script to show selected file names
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                this.nextElementSibling.nextElementSibling.textContent = fileName;
+                
+                // For photo upload, check file size
+                if (this.id === 'photo' && this.files[0]) {
+                    const fileSize = this.files[0].size / 1024; // in KB
+                    if (fileSize > 200) {
+                        alert('Photo size must be less than 200KB');
+                        this.value = '';
+                        this.nextElementSibling.nextElementSibling.textContent = 'No file chosen';
+                    }
+                }
+            });
+        });
+    </script>
+	    <footer>
         <p>Product by:</p>
         <p><a href="Amberlyn_profile.html">Amberlyn</a></p>
         <p><a href="#">Roxas</a></p>
@@ -180,16 +202,5 @@
         <p><a href="#">Michelle</a></p>
     </footer>
 
-    <script>
-        // Simple script to handle form submission
-        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to the server
-           
-            alert('Thank you for your enquiry! We will contact you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>

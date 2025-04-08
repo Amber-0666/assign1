@@ -1,0 +1,598 @@
+/* General Styling with limited color palette */
+:root {
+    --primary-color: rgb(165, 42, 42); /* Brown */
+    --secondary-color: #e7cdab; /* Dark Beige */
+    --light-bg: #f8e5cb; /* Light Beige */
+    --dark-text: #333;
+    --light-text: #fff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Ensures dropdowns aren't clipped */
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    transition: var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Keeps text in one line */
+}
+
+.menu li {
+    margin-left: 15px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.menu li a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px; /* Reduced from 20px to save space */
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.menu li a.active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--light-bg);
+    min-width: 200px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--dark-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .menu li {
+        margin-left: 10px;
+    }
+    .menu li a {
+        padding: 15px 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu li a {
+        padding: 15px 8px;
+        font-size: 14px;
+    }
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color), rgb(140, 35, 35));
+    color: white;
+    text-align: center;
+    padding: 180px 20px 100px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(165, 42, 42, 1), rgba(165, 42, 42, 0));
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease;
+}
+header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header .subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Main Content Layout - Larger Images and Form */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Larger Images */
+.image-left, .image-right {
+    flex: 1;
+    min-width: 650px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Content Layout - Fixes images shifting below */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Ensures all items stay aligned */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Ensure images and form take equal space */
+.image-left, .image-right, .form-container {
+    flex: 1; /* Allows all items to have equal width */
+    min-width: 600px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.image-left img, .image-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    object-fit: cover;
+    min-height: 900px;
+    transform-origin: center center;
+}
+
+.image-left img:hover, .image-right img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.03);
+}
+
+/* Larger Form Container */
+.form-container {
+    flex: 2;
+    min-width: 600px;
+    max-width: 1000px;
+    background-color: white;
+    padding: 60px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 0 20px;
+}
+
+.form-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Form Elements */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+}
+
+.form-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+    font-size: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(165, 42, 42, 0.2);
+}
+
+input::placeholder {
+    color: #aaa;
+    font-weight: 300;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 10px;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+    position: relative;
+    margin-top: 10px;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Update the file upload button hover effects */
+.file-upload-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    color: var(--dark-text);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.file-upload-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effect for the file input wrapper to make it more noticeable */
+.file-upload-wrapper:hover .file-upload-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Optional: Add transition to the file name display */
+.file-name {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.file-upload-wrapper:hover .file-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Submit Button */
+.form-footer {
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: rgb(140, 35, 35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(165, 42, 42, 0.3);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Update the form container width */
+.form-container {
+    flex: 3; /* Increased from flex: 2 */
+    min-width: 800px; /* Increased from 600px */
+    max-width: 1200px; /* Increased from 1000px */
+    background-color: white;
+    padding: 60px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 0 20px;
+}
+
+/* Keep the image-left styles but adjust if needed */
+.image-left {
+    flex: 1;
+    min-width: 650px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1800px) {
+    .content-container {
+        max-width: 1600px;
+    }
+    
+    .image-left,  {
+        min-width: 550px;
+        max-width: 650px;
+    }
+    
+    .form-container {
+        min-width: 550px;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .content-container {
+        max-width: 1400px;
+    }
+    
+    .image-left, {
+        min-width: 500px;
+        max-width: 600px;
+    }
+    
+    .form-container {
+        min-width: 500px;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-left, {
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    .image-left img,  {
+        min-height: 700px;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 120px 20px 60px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 5px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-container {
+        padding: 30px;
+    }
+    
+    .image-left img,  {
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .menu li a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .form-container {
+        padding: 20px;
+        min-width: 300px;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+    }
+    
+    input, select {
+        padding: 12px 15px;
+    }
+    
+    .file-upload-btn {
+        padding: 12px 15px;
+    }
+    
+    .submit-btn {
+        padding: 15px 20px;
+    }
+    
+    .image-left, .image-right {
+        min-width: 300px;
+    }
+    
+    .image-left img,  {
+        min-height: 400px;
+    }
+}
+
+footer {
+    background-color:#e7cdab; 
+    color: brown; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color:brown; 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
