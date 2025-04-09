@@ -713,124 +713,90 @@ a{
 
 
 /* Footer styles */
-.footer_container{
-    max-width: 1170px;
-    max-height: 800px;
+.footer {
+    background-color: #e7cdab;
+    color: #8B0000;
+    font-family: Arial, sans-serif;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer_row {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 20px;
     align-items: flex-start;
 }
 
-.footer_container img{
-    width: 15%;
-    height: 15%;
+.footer_logo img {
+    width: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-.footer_ul{
-    list-style: none;
+.footer-col {
+    flex: 1 1 150px;
 }
 
-.footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    size: 100%;
-    background-color: #e7cdab;
+.footer-h4 {
+    font-size: 16px;
     color: brown;
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-
-}
-
-.footer-col{
-    width: 25%;
-}
-
-.footer-col h4 {
-    font-size: 15px;
-    color: brown;
-    text-transform: capitalize;
-    position: relative;
-}
-
-.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: brown;
-    height: 0.8px;
-    box-sizing: border-box;
-    width: 50px;
-}
-
-.footer-col ul li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: brown;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
-    transition: all 0.2s ease;
+.footer_ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.footer-col ul li a:hover {
+.footer_ul li {
+    margin-bottom: 6px;
+}
+
+.footer_ul li a {
+    color: #a52a2a;
+    text-decoration: none;
+}
+
+.footer_ul li a:hover,
+.footer-h4 a:hover {
     color: #ff0000;
-    padding-left: 8px;
-}
-
-.footer-col .footer-social-links a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    color: brown;
-    transition: all 0.5s;
-}
-
-.footer-col .footer-whatsapp a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    color: brown;
-    transition: all 0.5s;
-}
-
-.footer-social-links a:hover {
-    background-color: #a52a2a;
-    color: #fff;
-}
-
-.footer-whatsapp a:hover {
-    background-color: #a52a2a;
-    color: #fff;
-}
-
-footer a {
-    color: brown;
-    text-decoration: none;
-}
-
-footer a:hover {
     text-decoration: underline;
-    color: #ff0000;
-    
+    padding-left: 5px;
+    transition: 0.3s ease;
+}
+
+.footer-social-links,
+.footer-whatsapp {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-social-links a,
+.footer-whatsapp a {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border: 1px solid #f8e5cb;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    color: #a52a2a;
+    transition: 0.4s ease;
+}
+
+.footer-social-links a:hover,
+.footer-whatsapp a:hover {
+    background: #a52a2a;
+    color: #fff;
 }
 /* End of Footer CSS file */
 
