@@ -9,7 +9,6 @@
 .index-body {
     font-family: Arial, sans-serif;
     color: #2c3e50; 
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -112,6 +111,7 @@
     align-items: center;
     text-align: center;
     color: #ffffff; 
+    line-height: 1.6;
 }
 
 .index-hero-content h1 {
@@ -316,6 +316,7 @@
     box-sizing: none;
     padding: 0;
     margin: 0;
+    line-height: 1.6;
 }
 
 .index-about-content h2 {
@@ -418,6 +419,7 @@
     font-size:30px;
     padding: 0;
     margin: 0;
+    line-height: 1.6;
 }
 
 .index-row{
