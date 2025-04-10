@@ -698,7 +698,7 @@ header {
     color: white;
     text-align: center;
     width: 100%;
-    padding: 100px 20px 100px;
+    padding: 50px 20px 50px;
     margin-bottom: 40px;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -1157,10 +1157,18 @@ input::placeholder {
 
 
 /* Pass Activities CSS file */
-.past-body {
+.past-body,
+.coming_soon-body,
+.current-body {
     background-color: #f8e5cb;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
+}
+
+.coming_soon-body-text,
+.current-body-text,
+.past-body-text {
+    text-align: center;
 }
 
 .past-body-text h2,
@@ -1168,8 +1176,26 @@ input::placeholder {
 .coming_soon-body-text h2 {
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
+    font-size: 35px;
 }
+
+.coming_soon-body-text img,
+.current-body-text img {
+    height:auto;
+    width: 100%;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.coming_soon-body-text p,
+.current-body-text p {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;;
+}
+
 
 .gallery {
     display: grid;
@@ -1340,33 +1366,4 @@ input::placeholder {
        margin: 0 auto;
     }
  }
-  
-/* End of Pass Activities file */
 
-
-
-/* Current Activities CSS file */
-.current-body {
-    background-color: #f8e5cb;
-    font-family: Arial, sans-serif;
-    color: rgb(165, 42, 42);
-}
-
-.current-body-text {
-    text-align: center;
-}
-/* End of Current Activities CSS file */
-
-
-
-/* Coming Soon CSS file */
-.coming_soon-body {
-    background-color: #f8e5cb;
-    font-family: Arial, sans-serif;
-    color: rgb(165, 42, 42);
-}
-
-.coming_soon-body-text {
-    text-align: center;
-}
-/* End of Coming Soon CSS file */
