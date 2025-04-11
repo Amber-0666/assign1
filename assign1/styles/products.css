@@ -251,7 +251,7 @@
 }
 
 .product_selection li:hover {
-    background-color: #e7cdab;
+    background-color: #f8e5cb;
     transform: translate(70px);
     transition: 0.9s;
     cursor: pointer;
@@ -375,7 +375,7 @@
     height: 80%;
     font-size: 0.85em;
     opacity: 1.0;
-
+    line-height: 2.25rem;
 }
 
 .pop_up img {
@@ -434,7 +434,6 @@
     font-weight: bold;
     text-decoration: none;
 }
-
 
 /* END OF PRODUCT CSS */
 
