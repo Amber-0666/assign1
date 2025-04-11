@@ -34,121 +34,163 @@
                 </div>
             </li>
 
-            <li><a href="#">JOIN US</a></li>                
-            <li><a href="#">ENQUIRY FORM</a></li>
+            <li><a href="joinus.html">JOIN US</a></li>                
+            <li><a href="enquiry.html">ENQUIRY FORM</a></li>
             <li><a href="register.html">MEMBERSHIP REGISTRATION</a></li>
             <li><a href="login.html">LOGIN</a></li>  
        </ul>
     </nav>
 
-    <div class= "register-container">
-        <form action= "">
-            <h1> MEMBER REGISTRATION </h1>
-            <div class= "register-from-input">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
-                <div class="register-labelline">Firstname</div>
-                <i class='bx bxs-user'></i>
-            </div>
+    <header>
+        <div class="header-upper">
+            <h1>Be our Member</h1>
+            <p class="subtitle">Become a member of our vibrant community and start your journey with exclusive benefits and updates.</p>
+        </div>
+    </header>
 
-            <div class= "register-from-input">
-                <input type="text" required maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
-                <div class="register-labelline">Lastname</div>
-                <i class='bx bxs-user'></i>
-            </div>
+    <main>
+        <div class="content-container-register">
+            <div class="form-container-register">
+                <h2>MEMBER REGISTRATION</h2>
+                <div class="image-register">
+                    <img src="styles/images/register.png" alt="Register Image" class="register-image">
+                </div>
 
-            <div class="register-from-input">
-                <form action="https://example.com/submit" method="post">
-                    <input type="text" name="email" required>
+                <form id="register-form">
+                    <div class="form-register-group">
+                        <div class="form-register-row">
+                            <div class="form-register-col">
+                                <label for="first-name">First Name*</label>
+                                <input type="text" id="first-name" name="first-name" required 
+                                    placeholder="Enter your first name"
+                                    pattern="[A-Za-z]{1,25}" 
+                                    title="Alphabetical characters only, max 25 characters"
+                                    maxlength="25">
+                            </div>
+                            <div class="form-register-col">
+                                <label for="last-name">Last Name*</label>
+                                <input type="text" id="last-name" name="last-name" required 
+                                    placeholder="Enter your last name"
+                                    pattern="[A-Za-z]{1,25}"
+                                    title="Alphabetical characters only, max 25 characters"
+                                    maxlength="25">
+                            </div>
+                        </div>
+
+                        <div class="form-reister-row">
+                            <div class="form-register-col">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required 
+                                       placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-register-col">
+                                <label for="ID">Login ID*</label>
+                                <input type="text" id="ID" name="ID" required 
+                                    placeholder="Enter your Login ID"
+                                    pattern="[A-Za-z]{1,10}" 
+                                    title="Alphabetical characters only, max 10 characters"
+                                    maxlength="10">
+                            </div>
+                            <div class="form-register-col">
+                                <label for="Password">Password*</label>
+                                <input type="text" id="Password" name="Password" required 
+                                    placeholder="Enter your Password"
+                                    pattern="[A-Za-z]{1,25}" 
+                                    title="Alphabetical characters only, max 25 characters"
+                                    maxlength="25">
+                            </div>
+                        </div>
+
+                        <div class="form-register-footer">
+                            <button type="submit" class="submit-register-btn">
+                                Submit
+                            </button>
+                            <button type="reset" class="reset-register-btn">
+                                Reset
+                            </button>
+                            <p class="form-register-note">* Complete your member registration by filling in the required fields.</p>
+                        </div>
+
+                        <div class= "register-login-link">
+                            <br><p> Already have an account? <a href= "login.html"> Login </a></p>
+                        </div>
+                    </div>
                 </form>
-                <div class="register-labelline">Email Address</div>
-                <i class='bx bx-envelope' ></i>
+
             </div>
 
-            <div class= "register-from-input">
-                <input type="text" pattern="[A-Za-z]+" title="Max 10 characters, letters only (A-Z, a-z)" required>
-                <div class="register-labelline">Login ID</div>
-                <i class='bx bx-log-in-circle' ></i>
-            </div>
-            
-            <div class= "register-from-input">
-                <input type="text" maxlength="25" pattern="[A-Za-z]+" title="Max 25 characters, letters only (A-Z, a-z)" required>
-                <div class="register-labelline">Password</div>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-
-            <button type= "submit" class= "register-btn"> Register Now</button>
-
-            <div class= "register-login-link">
-                <br><p> Already have an account? <a href= "login.html"> Login </a></p>
-            </div>
-        </form>
-
-    </div>
-
-    <footer class="footer">
-        <div class="footer_container">
-            <div class="footer_row">
-                <div class="footer_logo">
-                    <a href="index.html"><img src="styles/images/logo.png"></a>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-h4"><strong>TEAM</strong></h4>
-                    <ul class="footer_ul">
-                        <li><a href="Chua_profile.html">Chua Yong Kang</a></li>
-                        <li><a href="Roxas_profile.html">Roxas Teo Xuan Hao</a></li>
-                        <li><a href="Michelle_profile.html">Michelle Tan Mei Xuan</a></li>
-                        <li><a href="Amberlyn_profile.html">Amberlyn Lim Xi En</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-h4"><strong>PRODUCTS</strong></h4>
-                    <ul class="footer_ul">
-                        <li><a href="#">Basic Brew</a></li>
-                        <li><a href="#">Artisan Brew</a></li>
-                        <li><a href="#">Non-Coffee</a></li>
-                        <li><a href="#">Hot Beverages</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-h4"><strong>ACTIVITIES</strong></h4>
-                    <ul class="footer_ul">
-                        <li><a href="coming_soon.html">Coming Soon</a></li>
-                        <li><a href="current.html">Current Activities</a></li>
-                        <li><a href="past_activities.html">Past Activities</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-h4"><a href="#"><strong>JOIN US</strong></a></h4>
-                    <h4 class="footer-h4"><a href="#"><strong>ENQUIRY FORM</strong></a></h4>
-                    <h4 class="footer-h4"><a href="registration.html"><strong>MEMBERSHIP REGISTRATION</strong></a></h4>
-                    <h4 class="footer-h4"><a href="login.html"><strong>LOGIN</strong></a></h4>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-h4"><strong>FOLLOW US</strong></h4>
-                    <div class="footer-social-links">
-                        <a href="https://www.facebook.com/share/18M9JEQBPr/"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/brewngo.coffee/"><i class='bx bxl-instagram'></i></a>
+            <footer class="footer">
+                <div class="footer_container">
+                    <div class="footer_row">
+                        <div class="footer_logo">
+                            <a href="index.html"><img src="styles/images/logo.png"></a>
+                        </div>
+        
+                        <div class="footer-col">
+                            <h4 class="footer-h4"><strong>TEAM</strong></h4>
+                            <ul class="footer_ul">
+                                <li><a href="Chua_profile.html">Chua Yong Kang</a></li>
+                                <li><a href="Roxas_profile.html">Roxas Teo Xuan Hao</a></li>
+                                <li><a href="Michelle_profile.html">Michelle Tan Mei Xuan</a></li>
+                                <li><a href="Amberlyn_profile.html">Amberlyn Lim Xi En</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer-col">
+                            <h4 class="footer-h4"><strong>PRODUCTS</strong></h4>
+                            <ul class="footer_ul">
+                                <li><a href="product1.html">Basic Brew</a></li>
+                                <li><a href="product2.html">Artisan Brew</a></li>
+                                <li><a href="product3.html">Non-Coffee</a></li>
+                                <li><a href="product4.html">Hot Beverages</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer-col">
+                            <h4 class="footer-h4"><strong>ACTIVITIES</strong></h4>
+                            <ul class="footer_ul">
+                                <li><a href="coming_soon.html">Coming Soon</a></li>
+                                <li><a href="current.html">Current Activities</a></li>
+                                <li><a href="past_activities.html">Past Activities</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer-col">
+                            <div class="footer-quick-links-1">
+                                <h4 class="footer-h4"><a href="joinus.html"><strong>JOIN US</strong></a></h4>
+                                <h4 class="footer-h4"><a href="enquiry.html"><strong>ENQUIRY FORM</strong></a></h4>
+                                <h4 class="footer-h4"><a href="registration.html"><strong>MEMBERSHIP REGISTRATION</strong></a></h4>
+                                <h4 class="footer-h4"><a href="login.html"><strong>LOGIN</strong></a></h4>
+                            </div>
+                        </div>
+        
+                        <div class="footer-col">
+                            <div class="footer-quick-links-1">
+                            <h4 class="footer-h4"><a href="acknowledgement.html"><strong>ACKNOWLEDGEMENT</strong></a></h4>
+                            <h4 class="footer-h4"><a href="enhancement.html"><strong>ENHANCEMENT</strong></a></h4>
+                        </div>
+        
+                        <div class="footer-col">
+                            <h4 class="footer-h4"><strong>FOLLOW US</strong></h4>
+                            <div class="footer-social-links">
+                                <a href="https://www.facebook.com/share/18M9JEQBPr/"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://www.instagram.com/brewngo.coffee/"><i class='bx bxl-instagram'></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="footer-col">
+                            <h4 class="footer-h4"><strong>CONTACT US FOR ORDER!</strong></h4>
+                            <div class="footer-whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=601116531886&text=Hello%2C%20I%20want%20to%20pre-order%20%F0%9F%98%84%0ADate%
+                            3A%20%0A%0A1.%20Order%3A%20%0A-%20%0A-%0A%0A2.%20Pick-up%2FDelivery%0APick-up%20Point%20%F0%9F%9B%8D%EF%B8%8F%20%0A%5B%20%
+                            5D%20Old%20KPJ%20Hospital%20(opposite%20stutong%20market)%0A%0ADelivery%20%F0%9F%9A%99%20%0A%5B%20%5D%20Jalan%20Song%0A%5B%
+                            20%5D%20BDC%20%0A%5B%20%5D%20101%20%0A%5B%20%5D%20Tabuan%20Area%20%0A%5B%20%5D%20Swinburne%20%0A%0A3.%20Time%20%E2%8F%B0%20
+                            %0A%5B%20%5D%2011.30am%20%0A%5B%20%5D%2012.30pm%20%0A%5B%20%5D%201.30pm%20%0A%5B%20%5D%202.30pm%20%0A%5B%20%5D%203.30pm%20%
+                            0A%5B%20%5D%204pm%20(last%20order)"><i class='bx bx-mobile'></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4 class="footer-h4"><strong>CONTACT US FOR ORDER!</strong></h4>
-                    <div class="footer-whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=601116531886&text=Hello%2C%20I%20want%20to%20pre-order%20%F0%9F%98%84%0ADate%
-                    3A%20%0A%0A1.%20Order%3A%20%0A-%20%0A-%0A%0A2.%20Pick-up%2FDelivery%0APick-up%20Point%20%F0%9F%9B%8D%EF%B8%8F%20%0A%5B%20%
-                    5D%20Old%20KPJ%20Hospital%20(opposite%20stutong%20market)%0A%0ADelivery%20%F0%9F%9A%99%20%0A%5B%20%5D%20Jalan%20Song%0A%5B%
-                    20%5D%20BDC%20%0A%5B%20%5D%20101%20%0A%5B%20%5D%20Tabuan%20Area%20%0A%5B%20%5D%20Swinburne%20%0A%0A3.%20Time%20%E2%8F%B0%20
-                    %0A%5B%20%5D%2011.30am%20%0A%5B%20%5D%2012.30pm%20%0A%5B%20%5D%201.30pm%20%0A%5B%20%5D%202.30pm%20%0A%5B%20%5D%203.30pm%20%
-                    0A%5B%20%5D%204pm%20(last%20order)"><i class='bx bx-mobile'></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+            </footer>
 </body>
 
 </html>
