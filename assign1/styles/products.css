@@ -284,6 +284,7 @@
     align-items: center;
     text-align: center;
     float: right;
+    line-height: 2.5rem;
 }
 
 .product_menu img {
@@ -331,8 +332,8 @@
 }
 
 .product_details {
-    min-height: 20vh;
-    background-color: #e7cdab;
+    min-height: 10vh;
+    background-color: #f8e5cb;
     background-size: cover;
     display: flex;
     justify-content: flex-start;
