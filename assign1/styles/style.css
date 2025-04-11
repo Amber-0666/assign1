@@ -1157,6 +1157,44 @@ input::placeholder {
 
 
 /* Pass Activities CSS file */
+
+.current-body-text{
+    width: 100%;
+}
+
+.current-text-wrapper {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.current-wrapper-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+}
+
+.current-wrapper-text img {
+    width: 400px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.current-text {
+    text-align: left;
+    margin-right: 220px;
+    width: 700px;
+}
+
 .past-body,
 .coming_soon-body,
 .current-body {
@@ -1166,13 +1204,11 @@ input::placeholder {
 }
 
 .coming_soon-body-text,
-.current-body-text,
 .past-body-text {
     text-align: center;
 }
 
 .past-body-text h2,
-.current-body-text h2,
 .coming_soon-body-text h2 {
     text-align: center;
     padding-top: 20px;
@@ -1180,8 +1216,8 @@ input::placeholder {
     font-size: 35px;
 }
 
-.coming_soon-body-text img,
-.current-body-text img {
+
+.coming_soon-body-text img {
     height:auto;
     width: 100%;
     padding-left:50px;
