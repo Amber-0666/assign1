@@ -619,10 +619,6 @@ hr {
     margin: -15px 0 15px;
 }
 
-.login-remember-forgot label input {
-    accent-color: #a52a2a;
-    margin-right: px;
-}
 
 .login-remember-forgot a {
     color: #a52a2a;
