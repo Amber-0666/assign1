@@ -23,6 +23,117 @@ body {
     line-height: 1.6;
 }
 
+
+.navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Ensures dropdowns aren't clipped */
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    transition: var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Keeps text in one line */
+}
+
+.menu li {
+    margin-left: 15px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.menu li a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px; /* Reduced from 20px to save space */
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.menu li a.active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--light-bg);
+    min-width: 200px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--dark-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .menu li {
+        margin-left: 10px;
+    }
+    .menu li a {
+        padding: 15px 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu li a {
+        padding: 15px 8px;
+        font-size: 14px;
+    }
+}
+
 /* Header */
 header {
     background: linear-gradient(135deg, var(--primary-color), rgb(140, 35, 35));
@@ -467,4 +578,20 @@ legend {
     .image-left img {
         min-height: 400px;
     }
+}
+
+footer {
+    background-color: #e7cdab; 
+    color: brown; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: brown; 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

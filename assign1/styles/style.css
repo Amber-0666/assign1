@@ -952,19 +952,15 @@ header .subtitle {
 
 /* Profile Page Styles */
 .profile-body {
-    background-color: #e7cdab;
+    background-color: #f8e5cb;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
-    text-align: center;
 }
 
 .profile-container {
-    width: 60%;
     margin: auto;
     background-color: #f8e5cb;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .profile-h1 {
@@ -979,23 +975,26 @@ header .subtitle {
     border: 5px groove rgb(165, 42, 42);
     display: block;
     margin: 20px auto;
-    padding: 20px;
+    padding: 10px;
 }
 .profile-table {
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
     border-collapse: collapse;
     border: 1px solid brown;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .profile-th, .profile-td {
-    border: 1px solid brown;
+    border: 3px solid brown;
     padding: 10px;
     
 }
 
 .profile-th {
-    background-color: #f8e5cb;
+    background-color:#e7cdab;
+    color: brown;
     font-weight: bold;
     width:20%;
     text-align: center;
@@ -1003,6 +1002,10 @@ header .subtitle {
 
 .profile-td {
     text-align: left;
+}
+
+.profile-td ul{
+    padding-left: 20px;
 }
 
 .profile-td a {
@@ -1129,81 +1132,22 @@ header .subtitle {
 
 
 /* Pass Activities CSS file */
-
-.current-body-text{
-    width: 100%;
-}
-
-.current-text-wrapper {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.current-wrapper-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    width: 400px;
-}
-
-.current-wrapper-text img {
-    width: 400px;
-    height: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-}
-
-.current-text {
-    text-align: left;
-    margin-right: 220px;
-    width: 700px;
-}
-
-.past-body,
-.coming_soon-body,
-.current-body {
+.past-body {
     background-color: #f8e5cb;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
 }
 
-.coming_soon-body-text,
 .past-body-text {
     text-align: center;
 }
 
-.past-body-text h2,
-.coming_soon-body-text h2 {
+.past-body-text h2 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 35px;
 }
-
-
-.coming_soon-body-text img {
-    height:auto;
-    width: 100%;
-    padding-left:50px;
-    padding-right: 50px;
-    padding-top: 10px;
-}
-
-.coming_soon-body-text p,
-.current-body-text p {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;;
-}
-
 
 .gallery {
     display: grid;
@@ -1375,3 +1319,135 @@ header .subtitle {
     }
  }
 
+/* End of Pass Activities CSS file */
+
+
+
+/* Current Activities CSS file */
+.current-body-text{
+    width: 100%;
+}
+
+.current-text-wrapper {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.current-wrapper-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 40px;
+}
+
+.current-wrapper-text img {
+    width: 400px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.current-text {
+    text-align: left;
+    margin-right: 400px;
+    padding-top: 100px;
+    width: 700px;
+}
+
+.current-text p {
+    font-size: 30px;
+}
+
+.current-body {
+    background-color: #f8e5cb;
+    font-family: Arial, sans-serif;
+    color: rgb(165, 42, 42);
+}
+
+/* End of Current Activities CSS file */
+
+
+
+/* Coming Soon Activities CSS file */
+.coming_soon-body {
+    background-color: #f8e5cb;
+    font-family: Arial, sans-serif;
+    color: rgb(165, 42, 42);
+}
+
+.coming_soon-body-text {
+    text-align: center;
+    width: 100%;
+}
+
+.coming_soon-body-text h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+
+
+.coming_soon-body-text img {
+    height:auto;
+    width: 100%;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.coming_soon-body-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;;
+}
+
+.coming-text-wrapper {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.coming-wrapper-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 40px;
+}
+
+.coming-wrapper-text img {
+    width: 400px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.coming-text {
+    text-align: left;
+    margin-right: 400px;
+    padding-top: 100px;
+    width: 700px;
+}
+
+.coming-text p {
+    font-size: 30px;
+}
+
+/* End of Coming Soon Activities CSS file */
