@@ -74,7 +74,6 @@ header .subtitle {
     margin: 0 auto;
     opacity: 0.9;
 }
-
 /* Main Content Container */
 .content-container {
     display: flex;
@@ -238,6 +237,52 @@ select {
 .form-footer {
     margin-top: 40px;
     text-align: center;
+}
+
+/* Adjust the submit button to account for the new reset button */
+.form-footer .submit-btn {
+    margin-top: 0;
+}
+
+.reset-btn {
+    background: linear-gradient(to right, #e7cdab, #d8b98d); /* Gradient similar to submit but with beige tones */
+    color: var(--dark-text);
+    padding: 18px 30px;
+    border: none;
+    border-radius: 50px; /* Matching the pill shape */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: var(--transition);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(231, 205, 171, 0.3);
+    margin-bottom: 15px;
+}
+
+.reset-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(231, 205, 171, 0.4);
+    background: linear-gradient(to right, #f0d9bc, #e7cdab); /* Slightly lighter gradient on hover */
+}
+
+.reset-btn:hover::before {
+    left: 100%;
 }
 
 .submit-btn {
