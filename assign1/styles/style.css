@@ -84,7 +84,8 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     z-index: 1;
-    margin-top: 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-dropdown-content a {
@@ -695,7 +696,7 @@ header {
     z-index: -2;
     text-align: center;
     width: 100%;
-    padding: 200px 20px 50px;
+    padding: 50px 20px 50px;
     margin-bottom: 40px;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -1495,122 +1496,12 @@ body {
     line-height: 1.6;
 }
 
-.joinus-navbar {
-    width: 100%;
-    background-color: var(--joinus-secondary-color);
-    padding: 10px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* Ensures dropdowns aren't clipped */
-}
-
-.joinus-logo img {
-    width: 70px;
-    height: 70px;
-    transition: var(--joinus-transition);
-}
-
-.joinus-logo img:hover {
-    transform: scale(1.05);
-}
-
-.joinus-menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap; /* Prevents wrapping */
-    white-space: nowrap; /* Keeps text in one line */
-}
-
-.joinus-menu li {
-    margin-left: 15px;
-    position: relative; /* Needed for dropdown positioning */
-}
-
-.joinus-menu li a {
-    color: var(--joinus-dark-text);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 15px 15px; /* Reduced from 20px to save space */
-    transition: var(--joinus-transition);
-    border-radius: var(--joinus-border-radius);
-    display: block;
-}
-
-.joinus-menu li a:hover {
-    background-color: var(--joinus-secondary-color);
-    color: var(--joinus-primary-color);
-}
-
-.joinus-menu li a.active {
-    color: var(--joinus-primary-color);
-    background-color: var(--joinus-secondary-color);
-    font-weight: 700;
-}
-
-/* Dropdown Styling */
-.joinus-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--joinus-light-bg);
-    min-width: 200px;
-    box-shadow: var(--joinus-box-shadow);
-    border-radius: var(--joinus-border-radius);
-    z-index: 1;
-    margin-top: 5px;
-}
-
-.joinus-dropdown-content a {
-    color: var(--joinus-dark-text);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    border-bottom: 1px solid var(--joinus-secondary-color);
-}
-
-.joinus-dropdown-content a:hover {
-    background-color: var(--joinus-secondary-color);
-    color: var(--joinus-primary-color);
-}
-
-.joinus-dropdown:hover .joinus-dropdown-content {
-    display: block;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .joinus-menu li {
-        margin-left: 10px;
-    }
-    .joinus-menu li a {
-        padding: 15px 10px;
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .joinus-menu li a {
-        padding: 15px 8px;
-        font-size: 14px;
-    }
-}
-
 /* Header */
 .joinus-header {
     background: linear-gradient(135deg, var(--joinus-primary-color), rgb(140, 35, 35));
     color: white;
     text-align: center;
-    padding: 180px 20px 100px;
+    padding: 100px 20px 100px;
     margin-bottom: 40px;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -2137,7 +2028,7 @@ body {
     background: linear-gradient(135deg, var(--enquiry-primary-color), rgb(140, 35, 35));
     color: white;
     text-align: center;
-    padding: 180px 20px 100px;
+    padding: 100px 20px 100px;
     margin-bottom: 40px;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
