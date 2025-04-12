@@ -1385,3 +1385,644 @@ header .subtitle {
 }
 
 /* End of Coming Soon Activities CSS file */
+
+
+/* General Styling with limited color palette */
+:root {
+    --joinus-primary-color: rgb(165, 42, 42); /* Brown */
+    --joinus-secondary-color: #e7cdab; /* Dark Beige */
+    --joinus-light-bg: #f8e5cb; /* Light Beige */
+    --joinus-dark-text: #333;
+    --joinus-light-text: #fff;
+    --joinus-border-radius: 8px;
+    --joinus-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --joinus-transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--joinus-light-bg);
+    color: var(--joinus-dark-text);
+    line-height: 1.6;
+}
+
+.joinus-navbar {
+    width: 100%;
+    background-color: var(--joinus-secondary-color);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Ensures dropdowns aren't clipped */
+}
+
+.joinus-logo img {
+    width: 70px;
+    height: 70px;
+    transition: var(--joinus-transition);
+}
+
+.joinus-logo img:hover {
+    transform: scale(1.05);
+}
+
+.joinus-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Keeps text in one line */
+}
+
+.joinus-menu li {
+    margin-left: 15px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.joinus-menu li a {
+    color: var(--joinus-dark-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px; /* Reduced from 20px to save space */
+    transition: var(--joinus-transition);
+    border-radius: var(--joinus-border-radius);
+    display: block;
+}
+
+.joinus-menu li a:hover {
+    background-color: var(--joinus-secondary-color);
+    color: var(--joinus-primary-color);
+}
+
+.joinus-menu li a.active {
+    color: var(--joinus-primary-color);
+    background-color: var(--joinus-secondary-color);
+    font-weight: 700;
+}
+
+/* Dropdown Styling */
+.joinus-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--joinus-light-bg);
+    min-width: 200px;
+    box-shadow: var(--joinus-box-shadow);
+    border-radius: var(--joinus-border-radius);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.joinus-dropdown-content a {
+    color: var(--joinus-dark-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid var(--joinus-secondary-color);
+}
+
+.joinus-dropdown-content a:hover {
+    background-color: var(--joinus-secondary-color);
+    color: var(--joinus-primary-color);
+}
+
+.joinus-dropdown:hover .joinus-dropdown-content {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .joinus-menu li {
+        margin-left: 10px;
+    }
+    .joinus-menu li a {
+        padding: 15px 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .joinus-menu li a {
+        padding: 15px 8px;
+        font-size: 14px;
+    }
+}
+
+/* Header */
+.joinus-header {
+    background: linear-gradient(135deg, var(--joinus-primary-color), rgb(140, 35, 35));
+    color: white;
+    text-align: center;
+    padding: 180px 20px 100px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.joinus-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(165, 42, 42, 1), rgba(165, 42, 42, 0));
+    z-index: -1;
+}
+
+.joinus-header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease;
+}
+
+.joinus-header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.joinus-header .joinus-subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Main Content Layout - Larger Images and Form */
+.joinus-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Larger Images */
+.joinus-image-left, .joinus-image-right {
+    flex: 1;
+    min-width: 650px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Content Layout - Fixes images shifting below */
+.joinus-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Ensures all items stay aligned */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Ensure images and form take equal space */
+.joinus-image-left, .joinus-image-right, .joinus-form-container {
+    flex: 1; /* Allows all items to have equal width */
+    min-width: 600px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+.joinus-image-left img, .joinus-image-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--joinus-border-radius);
+    box-shadow: var(--joinus-box-shadow);
+    transition: var(--joinus-transition);
+    object-fit: cover;
+    min-height: 900px;
+    transform-origin: center center;
+}
+
+.joinus-image-left img:hover, .joinus-image-right img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.03);
+}
+
+/* Larger Form Container */
+.joinus-form-container {
+    flex: 2;
+    min-width: 600px;
+    max-width: 1000px;
+    background-color: white;
+    padding: 60px;
+    border-radius: var(--joinus-border-radius);
+    box-shadow: var(--joinus-box-shadow);
+    margin: 0 20px;
+}
+
+.joinus-form-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--joinus-primary-color);
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Form Elements */
+.joinus-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.joinus-form-row {
+    display: flex;
+    gap: 25px;
+}
+
+.joinus-form-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.joinus-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--joinus-dark-text);
+    font-size: 1rem;
+}
+
+.joinus-input, .joinus-select {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--joinus-secondary-color);
+    border-radius: var(--joinus-border-radius);
+    background-color: white;
+    transition: var(--joinus-transition);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.joinus-input:focus, .joinus-select:focus {
+    border-color: var(--joinus-primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(165, 42, 42, 0.2);
+}
+
+.joinus-input::placeholder {
+    color: #aaa;
+    font-weight: 300;
+}
+
+/* Fieldset Styling */
+.joinus-fieldset {
+    border: 1px solid var(--joinus-secondary-color);
+    border-radius: var(--joinus-border-radius);
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.joinus-legend {
+    color: var(--joinus-primary-color);
+    font-weight: 700;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* File Upload */
+.joinus-file-upload-wrapper {
+    position: relative;
+    margin-top: 10px;
+}
+
+.joinus-file-upload-wrapper input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Update the file upload button hover effects */
+.joinus-file-upload-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: var(--joinus-secondary-color);
+    color: var(--joinus-dark-text);
+    border-radius: var(--joinus-border-radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--joinus-transition);
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.joinus-file-upload-btn:hover {
+    background-color: var(--joinus-primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effect for the file input wrapper to make it more noticeable */
+.joinus-file-upload-wrapper:hover .joinus-file-upload-btn {
+    background-color: var(--joinus-primary-color);
+    color: white;
+}
+
+/* Optional: Add transition to the file name display */
+.joinus-file-name {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    transition: var(--joinus-transition);
+}
+
+.joinus-file-upload-wrapper:hover .joinus-file-name {
+    color: var(--joinus-primary-color);
+    font-weight: 500;
+}
+
+/* Submit Button */
+.joinus-form-footer {
+    margin-top: 30px;
+}
+
+/* Form Buttons */
+.joinus-form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.joinus-reset-btn {
+    background-color: #e7cdab;
+    color: var(--joinus-dark-text);
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--joinus-border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--joinus-transition);
+}
+
+.joinus-reset-btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.joinus-submit-btn {
+    background-color: var(--joinus-primary-color);
+    color: white;
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--joinus-border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--joinus-transition);
+}
+
+.joinus-submit-btn:hover {
+    background-color: rgb(140, 35, 35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(165, 42, 42, 0.3);
+}
+
+.joinus-submit-btn {
+    background-color: var(--joinus-primary-color);
+    color: white;
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--joinus-border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--joinus-transition);
+}
+
+.joinus-submit-btn:hover {
+    background-color: rgb(140, 35, 35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(165, 42, 42, 0.3);
+}
+
+.joinus-form-note {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.joinus-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 0 2% 50px;
+    gap: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Update the form container width */
+.joinus-form-container {
+    flex: 3; /* Increased from flex: 2 */
+    min-width: 800px; /* Increased from 600px */
+    max-width: 1200px; /* Increased from 1000px */
+    background-color: white;
+    padding: 60px;
+    border-radius: var(--joinus-border-radius);
+    box-shadow: var(--joinus-box-shadow);
+    margin: 0 20px;
+}
+
+/* Keep the image-left styles but adjust if needed */
+.joinus-image-left {
+    flex: 1;
+    min-width: 650px;
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1800px) {
+    .joinus-content-container {
+        max-width: 1600px;
+    }
+       
+    .joinus-image-left {
+        min-width: 550px;
+        max-width: 650px;
+    }
+    
+    .joinus-form-container {
+        min-width: 550px;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .joinus-content-container {
+        max-width: 1400px;
+    }
+    
+    .joinus-image-left {
+        min-width: 500px;
+        max-width: 600px;
+    }
+    
+    .joinus-form-container {
+        min-width: 500px;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .joinus-content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .joinus-image-left {
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    .joinus-image-left img {
+        min-height: 700px;
+    }
+
+    .joinus-form-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .joinus-header {
+        padding: 120px 20px 60px;
+    }
+    
+    .joinus-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .joinus-subtitle {
+        font-size: 1rem;
+    }
+    
+    .joinus-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .joinus-menu li {
+        margin: 5px;
+    }
+    
+    .joinus-form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .joinus-form-container {
+        padding: 30px;
+    }
+    
+    .joinus-image-left img {
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .joinus-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .joinus-navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .joinus-menu li a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .joinus-form-container {
+        padding: 20px;
+        min-width: 300px;
+    }
+    
+    .joinus-form-container h2 {
+        font-size: 2rem;
+    }
+    
+    .joinus-input, .joinus-select {
+        padding: 12px 15px;
+    }
+    
+    .joinus-file-upload-btn {
+        padding: 12px 15px;
+    }
+    
+    .joinus-submit-btn {
+        padding: 15px 20px;
+    }
+    
+    .joinus-image-left, .joinus-image-right {
+        min-width: 300px;
+    }
+    
+    .joinus-image-left img {
+        min-height: 400px;
+    }
+}
+
+.joinus-footer {
+    background-color: #e7cdab; 
+    color: brown; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+.joinus-footer a {
+    color: brown; 
+    text-decoration: none;
+}
+
+.joinus-footer a:hover {
+    text-decoration: underline;
+}
