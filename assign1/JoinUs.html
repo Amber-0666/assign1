@@ -162,6 +162,9 @@
                         </div>
 
                         <div class="form-footer">
+                            <button type="reset" class="reset-btn">
+                                Reset Form
+                            </button>
                             <button type="submit" class="submit-btn">
                                 Submit Application
                             </button>
@@ -176,7 +179,7 @@
     </main>
 
     <script>
-        // Simple script to show selected file names
+        
         document.querySelectorAll('input[type="file"]').forEach(input => {
             input.addEventListener('change', function() {
                 const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
