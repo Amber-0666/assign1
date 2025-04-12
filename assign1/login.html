@@ -41,44 +41,59 @@
        </ul>
     </nav>
 
-    <div class="login-Container">
-        <div class="login-card">
-            <div class="login-card-inner">
-                <div class="login-card-front">
+    <header>
+        <div class="header-upper">
+            <h1>Welcome back</h1>
+            <p class="subtitle">Log in to access your rewards and keep the good sips going.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container-login">
+            <div class="form-container-login">
+                <h2>LOGIN</h2>
+                    <div class="form-login-col">
+                        <label for="login-ID">Login ID*</label>
+                        <input type="text" id="login-ID" name="register-ID" required 
+                            placeholder="Enter your Login ID"
+                            pattern="[A-Za-z]{1,10}" 
+                            title="Alphabetical characters only, max 10 characters"
+                            maxlength="10">
+                    </div>
+                    <div class="form-login-col">
+                        <label for="login-Password">Password*</label>
+                        <input type="text" id="login-Password" name="login-Password" required 
+                            placeholder="Enter your Password"
+                            pattern="[A-Za-z]{1,25}" 
+                            title="Alphabetical characters only, max 25 characters"
+                            maxlength="25">
+                    </div>
                 </div>
 
-                <div class="login-card-back">
+                <div class="form-login-options">
+                    <label class="remember-me">
+                      <input type="checkbox" name="remember" />
+                      Remember Me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <div class="register-login-link">
+                    <p>Don't have an account?</p>
+                    <a href="registration.html" class="register-button">Login</a>
+                </div>
+                
+                <div class="form-login-footer">
+                    <button type="reset" class="reset-login-btn">
+                        Reset
+                    </button>
+                    <button type="submit" class="submit-login-btn">
+                        Submit
+                    </button>
                 </div>
             </div>
         </div>
-
-        <div class= "login-wrapper">
-            <form action= "">
-                <h1> Login </h1>
-                <hr class="login-hr">
-                <div class= "login-input-box">
-                    <input type="text" maxlength="10" pattern="[A-Za-z]+" required placeholder="Enter login ID" title="Max 10 characters, letters only (A-Z, a-z)">
-                    <i class='bx bxs-user'></i>
-                </div>
-                
-                <div class= "login-input-box">
-                    <input type="text" maxlength="25" pattern="[A-Za-z]+" required placeholder="Enter password" title="Max 25 characters, letters only (A-Z, a-z)">
-                    <i class='bx bxs-lock-alt'></i>
-                </div>
-                
-
-                <div class= "login-remember-forgot">
-                    <a href= "#"> Forget password? </a>
-                </div>
-
-                <button type= "submit" class= "login-btn"> Login </button>
-
-                <div class= "login-register-link">
-                    <p> Don't have an account? <a href= "registration.html"> Register </a></p>
-                </div>
-            </form>
-        </div>
-    </div>
+    </main>
     
     <footer class="footer">
         <div class="footer_container">
