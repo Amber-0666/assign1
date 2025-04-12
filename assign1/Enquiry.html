@@ -6,7 +6,7 @@
     <title>Enquiry Form | Coffee Community</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles/Enquiry_style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -41,22 +41,22 @@
        </ul>
     </nav>
 
-    <header>
-        <div class="header-content">
+    <header class="enquiry-header">
+        <div class="enquiry-header-content">
             <h1>Customer Enquiry</h1>
-            <p class="subtitle">We're here to help with any questions about our products, services, or activities</p>
+            <p class="enquiry-subtitle">We're here to help with any questions about our products, services, or activities</p>
         </div>
     </header>
 
     <main>
-        <div class="content-container">
-            <div class="form-container enquiry-form">
+        <div class="enquiry-content-container">
+            <div class="enquiry-form-container enquiry-form">
                 <h2>Enquiry Form</h2>
                 
                 <form id="enquiry-form">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="form-col">
+                    <div class="enquiry-form-group">
+                        <div class="enquiry-form-row">
+                            <div class="enquiry-form-col">
                                 <label for="first-name">First Name*</label>
                                 <input type="text" id="first-name" name="first-name" required 
                                        placeholder="Enter your first name"
@@ -64,7 +64,7 @@
                                        title="Alphabetical characters only, max 25 characters"
                                        maxlength="25">
                             </div>
-                            <div class="form-col">
+                            <div class="enquiry-form-col">
                                 <label for="last-name">Last Name*</label>
                                 <input type="text" id="last-name" name="last-name" required 
                                        placeholder="Enter your last name"
@@ -74,13 +74,13 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-col">
+                        <div class="enquiry-form-row">
+                            <div class="enquiry-form-col">
                                 <label for="email">Email Address*</label>
                                 <input type="email" id="email" name="email" required 
                                        placeholder="your.email@example.com">
                             </div>
-                            <div class="form-col">
+                            <div class="enquiry-form-col">
                                 <label for="phone">Phone Number*</label>
                                 <input type="tel" id="phone" name="phone" required 
                                        placeholder="0123456789"
@@ -90,24 +90,24 @@
                             </div>
                         </div>
 
-                        <fieldset>
+                        <fieldset class="enquiry-fieldset">
                             <legend>Address Information</legend>
-                            <div class="form-row">
-                                <div class="form-col">
+                            <div class="enquiry-form-row">
+                                <div class="enquiry-form-col">
                                     <label for="street">Street Address*</label>
                                     <input type="text" id="street" name="street" required 
                                            placeholder="123 Coffee Street"
                                            maxlength="40">
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-col">
+                            <div class="enquiry-form-row">
+                                <div class="enquiry-form-col">
                                     <label for="city">City/Town*</label>
                                     <input type="text" id="city" name="city" required 
                                            placeholder="Kuala Lumpur"
                                            maxlength="20">
                                 </div>
-                                <div class="form-col">
+                                <div class="enquiry-form-col">
                                     <label for="state">State*</label>
                                     <select id="state" name="state" required>
                                         <option value="">Select State</option>
@@ -130,8 +130,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-col">
+                            <div class="enquiry-form-row">
+                                <div class="enquiry-form-col">
                                     <label for="postcode">Postcode*</label>
                                     <input type="text" id="postcode" name="postcode" required 
                                            placeholder="50000"
@@ -142,8 +142,8 @@
                             </div>
                         </fieldset>
 
-                        <div class="form-row">
-                            <div class="form-col">
+                        <div class="enquiry-form-row">
+                            <div class="enquiry-form-col">
                                 <label for="enquiry-type">Enquiry Type*</label>
                                 <select id="enquiry-type" name="enquiry-type" required>
                                     <option value="">Select Enquiry Type</option>
@@ -154,8 +154,8 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-col">
+                        <div class="enquiry-form-row">
+                            <div class="enquiry-form-col">
                                 <label for="message">Your Message*</label>
                                 <textarea id="message" name="message" required 
                                           placeholder="Please provide details about your enquiry"
@@ -163,14 +163,14 @@
                             </div>
                         </div>
 
-                        <div class="form-footer">
-                            <button type="reset" class="reset-btn">
+                        <div class="enquiry-form-footer">
+                            <button type="reset" class="enquiry-reset-btn">
                                 Reset Form
                             </button>
-                            <button type="submit" class="submit-btn">
+                            <button type="submit" class="enquiry-submit-btn">
                                 Submit Enquiry
                             </button>
-                            <p class="form-note">* Required fields. We'll respond to your enquiry within 2 business days.</p>
+                            <p class="enquiry-form-note">* Required fields. We'll respond to your enquiry within 2 business days.</p>
                         </div>
                     </div>
                 </form>
