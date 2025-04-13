@@ -656,24 +656,38 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .content-container-login {
-        padding: 30px 20px;
-        width: 90%;
+@media (max-width: 1170px) {
+    .login-image {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 1.5rem;
     }
+    
 
-    .form-login-footer {
-        flex-direction: column;
-        gap: 10px;
-    }
 
     .form-login-options {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+      flex-direction: column;
+      margin-left: 50px;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
-}
+
+    .login-register-link .register-button {
+    font-size: 0.8rem;
+    border-radius: 4px;
+    }
+  
+    .form-login-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  
+    .reset-login-btn,
+    .submit-login-btn {
+      margin: 0;
+    }
+  }
 
 
 /* End of Login CSS file */
@@ -983,6 +997,7 @@ header .subtitle {
     margin: auto;
     background-color: #f8e5cb;
     text-align: center;
+    margin-top: 110px;
 }
 
 .profile-h1 {
