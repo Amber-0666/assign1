@@ -124,6 +124,107 @@
     }
 }
 
+/* Hamburger Menu Styles */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.nav-toggle-label span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--dark-text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu styles */
+@media (max-width: 992px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 99;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .nav-menu li a {
+        width: 100%;
+        padding: 12px 0;
+    }
+    
+    .nav-dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+    
+    .nav-dropdown:hover .nav-dropdown-content {
+        display: none;
+    }
+    
+    .nav-toggle-label {
+        display: flex;
+    }
+    
+    .nav-toggle:checked ~ .nav-menu {
+        right: 0;
+    }
+    
+    /* Hamburger animation */
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* Make dropdowns clickable on mobile */
+@media (max-width: 992px) {
+    .nav-dropdown > .nav-dropbtn::after {
+        content: "+";
+        margin-left: 5px;
+    }
+    
+    .nav-toggle:checked ~ .nav-menu .nav-dropdown:focus-within > .nav-dropdown-content,
+    .nav-toggle:checked ~ .nav-menu .nav-dropdown:hover > .nav-dropdown-content {
+        display: block;
+    }
+    
+    .nav-toggle:checked ~ .nav-menu .nav-dropdown:focus-within > .nav-dropbtn::after {
+        content: "-";
+    }
+}
+
 .index-hero {
     height: 100vh;
     background-image: linear-gradient(rgba(243,184,153, 0.3),rgba(243,184,153, 0.3)),url('images/background.jpg'); /* Add your background image */
