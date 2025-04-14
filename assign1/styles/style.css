@@ -1532,72 +1532,66 @@ background: #444;
     color: rgb(165, 42, 42);
 }
 
-.coming_soon-body-text {
-    text-align: center;
-    width: 100%;
+.coming_soon-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px; /* adds space between the columns */
+    flex-wrap: wrap; /* makes it responsive */
+    padding: 20px;
 }
 
-.coming_soon-body-text h2 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    font-size: 35px;
-}
-
-
-.coming_soon-body-text img {
-    height:auto;
-    width: 100%;
-    padding-left:50px;
-    padding-right: 50px;
-    padding-top: 10px;
-}
-
-.coming_soon-body-text {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;;
-}
-
-.coming-text-wrapper {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.coming-wrapper-text {
+.coming_soon-row .coming_soon-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.coming_soon-row .coming_soon-col img {
+    width: 100%;           /* Full width of the column */
+    height: auto;          /* Keeps the image's natural ratio */
+    max-width: 300px;      /* Optional: limits it from being too large */
+    display: block;
+    margin: 0 auto;        /* Centers the image */
+    border-radius: 10px;   /* Optional: make corners rounded */
+}
+
+.coming_soon-activities .coming_soon-row {
+    margin-top: 50px;
+}
+
+.coming_soon-col {
+    background-color: #e7cdab;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 30%; /* grow/shrink, min-width around 45% */
+    box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    width: 400px;
-    font-size: 40px;
+    justify-content: center;
+    max-width: 500px;
 }
 
-.coming-wrapper-text img {
-    width: 400px;
-    height: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
+.coming_soon-col h4 {
+    font-size: 3vmin;
+    color:brown;
+    margin: 10px auto;
 }
 
-.coming-text {
-    text-align: left;
-    margin-right: 400px;
-    padding-top: 100px;
-    width: 700px;
+.coming_soon-col p {
+    color:brown;
+    padding: 0px 50px;
+    padding-bottom: 30px;
 }
 
-.coming-text p {
-    font-size: 30px;
+.coming_soon-col a {
+    color: #a52a2a;
+    text-decoration: underline;
 }
 
+.coming_soon-col a:hover {
+    text-decoration: none;
+    color:#ff0000
+}
 /* End of Coming Soon Activities CSS file */
 
 
