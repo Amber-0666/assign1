@@ -1475,8 +1475,8 @@ background: #444;
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 20px; /* adds space between the columns */
-    flex-wrap: wrap; /* makes it responsive */
+    gap: 20px; 
+    flex-wrap: wrap; 
     padding: 20px;
 }
 
@@ -1487,12 +1487,12 @@ background: #444;
 }
 
 .current-row .current-col img {
-    width: 100%;           /* Full width of the column */
-    height: auto;          /* Keeps the image's natural ratio */
-    max-width: 300px;      /* Optional: limits it from being too large */
+    width: 100%;           
+    height: auto;         
+    max-width: 300px;      
     display: block;
-    margin: 0 auto;        /* Centers the image */
-    border-radius: 10px;   /* Optional: make corners rounded */
+    margin: 0 auto;        
+    border-radius: 10px;   
 }
 
 .current-activities .current-row {
@@ -1503,7 +1503,7 @@ background: #444;
     background-color: #e7cdab;
     border-radius: 10px;
     padding: 20px;
-    flex: 1 1 30%; /* grow/shrink, min-width around 45% */
+    flex: 1 1 30%; 
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
@@ -1536,8 +1536,8 @@ background: #444;
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 20px; /* adds space between the columns */
-    flex-wrap: wrap; /* makes it responsive */
+    gap: 20px; 
+    flex-wrap: wrap; 
     padding: 20px;
 }
 
@@ -1548,12 +1548,12 @@ background: #444;
 }
 
 .coming_soon-row .coming_soon-col img {
-    width: 100%;           /* Full width of the column */
-    height: auto;          /* Keeps the image's natural ratio */
-    max-width: 300px;      /* Optional: limits it from being too large */
+    width: 100%;           
+    height: auto;          
+    max-width: 300px;      
     display: block;
-    margin: 0 auto;        /* Centers the image */
-    border-radius: 10px;   /* Optional: make corners rounded */
+    margin: 0 auto;        
+    border-radius: 10px;   
 }
 
 .coming_soon-activities .coming_soon-row {
@@ -1564,7 +1564,7 @@ background: #444;
     background-color: #e7cdab;
     border-radius: 10px;
     padding: 20px;
-    flex: 1 1 30%; /* grow/shrink, min-width around 45% */
+    flex: 1 1 30%; 
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
@@ -2625,6 +2625,7 @@ body {
     justify-content: space-between;
     transform: translate(0px);
     transition: 1.0s;
+    padding-left: 20px;
 }
 
 .product_selection a {
