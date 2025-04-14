@@ -1282,7 +1282,7 @@ input::placeholder {
 }
   
 .gallery-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.10);
 }
   
 .gallery-item img {
