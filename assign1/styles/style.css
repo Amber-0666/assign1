@@ -679,7 +679,6 @@
     text-decoration: underline;
 }
 
-/* Submit & Reset Buttons */
 .form-login-footer {
     display: flex;
     flex-direction: row;
@@ -1094,7 +1093,6 @@ header .subtitle {
     margin: auto;
     background-color: #f8e5cb;
     text-align: center;
-    margin-top: 110px;
 }
 
 .profile-h1 {
@@ -2876,3 +2874,122 @@ body {
 }
 
 /* END OF PRODUCT CSS FILE */
+
+/* Start of enhancement css file */
+.enhancement-title {
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.enchancement-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background-color: #e7cdab;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+    color: #3a2d1d;
+    flex-wrap: wrap;
+}
+
+.title-enchancement-content {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: #5a3c16;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #8d6433, #c6975d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.enhancement-info {
+    flex: 1 1 55%;
+    margin-bottom: 30px;
+}
+
+.enhancement-info p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.enhancement-info strong {
+    color: #5d3a00;
+    font-weight: 600;
+}
+
+.enhancement-info ul {
+    padding-left: 25px;
+    list-style-type: disc;
+}
+
+.enhancement-info li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.enhancement-video {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.enhancement-video p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.enhancement-button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #754f1b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.enhancement-button:hover {
+    background-color: #5c3e13;
+    transform: scale(1.05);
+}
+
+iframe {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .automatic-typing-container {
+        flex-direction: column;
+    }
+
+    .enhancement-automatic-typing,
+    .enhancement-video {
+        flex: 1 1 100%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
