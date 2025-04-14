@@ -1485,55 +1485,62 @@ background: #444;
 
 
 /* Current Activities CSS file */
-.current-body-text{
-    width: 100%;
-}
-
-.current-text-wrapper {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.current-wrapper-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    width: 400px;
-    font-size: 40px;
-}
-
-.current-wrapper-text img {
-    width: 400px;
-    height: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-}
-
-.current-text {
-    text-align: left;
-    margin-right: 400px;
-    padding-top: 100px;
-    width: 700px;
-}
-
-.current-text p {
-    font-size: 30px;
-}
-
 .current-body {
     background-color: #f8e5cb;
     font-family: Arial, sans-serif;
     color: rgb(165, 42, 42);
 }
 
+.current-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px; /* adds space between the columns */
+    flex-wrap: wrap; /* makes it responsive */
+    padding: 20px;
+}
+
+.current-row .current-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-row .current-col img {
+    width: 100%;           /* Full width of the column */
+    height: auto;          /* Keeps the image's natural ratio */
+    max-width: 300px;      /* Optional: limits it from being too large */
+    display: block;
+    margin: 0 auto;        /* Centers the image */
+    border-radius: 10px;   /* Optional: make corners rounded */
+}
+
+.current-activities .current-row {
+    margin-top: 50px;
+}
+
+.current-col {
+    background-color: #e7cdab;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 30%; /* grow/shrink, min-width around 45% */
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.current-col h4 {
+    font-size: 3vmin;
+    color:brown;
+    margin: 10px auto;
+}
+
+.current-col p {
+    color:brown;
+    padding: 0px 50px;
+    padding-bottom: 30px;
+}
 /* End of Current Activities CSS file */
 
 
