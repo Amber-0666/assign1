@@ -2876,6 +2876,8 @@ body {
     max-width: 1300px;
     margin: 40px auto;
     padding: 40px 30px;
+    border-right: 5px solid #a52a2a;
+    border-bottom: 5px solid #a52a2a;
     background-color: #e7cdab;
     border-radius: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -2983,6 +2985,7 @@ iframe {
     padding: 60px 20px;
     background-color: #f8e5cb;
     font-family: 'Segoe UI', sans-serif;
+    color: #000000;
 }
   
 .acknowledgement h1 {
@@ -2995,43 +2998,53 @@ iframe {
     color: #a52a2a;
 }
   
-.acknowledgement .container {
+.acknowledgement .acknowledgement-container {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
     gap: 30px;
 }
   
-.acknowledgement .container > div {
-border-right: 5px solid #a52a2a;
-border-bottom: 5px solid #a52a2a;
-background-color: #ffffff;
-padding: 25px 20px;
-border-radius: 16px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.acknowledgement .acknowledgement-container > div {
+    border-right: 5px solid #a52a2a;
+    border-bottom: 5px solid #a52a2a;
+    background-color: #e7cdab;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .acknowledgement h3 {
-font-size: 20px;
-font-weight: 700;
-margin-bottom: 15px;
-color: #a52a2a;
-text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #a52a2a;
+    text-align: center;
 }
 
 .acknowledgement ol {
-padding-left: 20px;
-list-style: decimal inside;
+    padding-left: 20px;
+    list-style: decimal inside;
 }
 
 .acknowledgement li {
-font-size: 15px;
-margin-bottom: 10px;
-word-break: break-all;
-color: #4a3b28;
+    font-size: 15px;
+    margin-bottom: 10px;
+    word-break: break-all;
+    color: #4a3b28;
 }
 
 .acknowledgement li::marker {
-color: #000000;
+    color: #000000;
 }
+
+.acknowledgement-container a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .acknowledgement-container a:hover {
+    color: #565656;
+    text-decoration: underline;
+  }
