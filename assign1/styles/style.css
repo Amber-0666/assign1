@@ -2871,7 +2871,7 @@ body {
     text-transform: uppercase;
 }
 
-.enchancement-content {
+.enhancement-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2888,7 +2888,7 @@ body {
     flex-wrap: wrap;
 }
 
-.title-enchancement-content {
+.title-enhancement-content {
     width: 100%;
     font-size: 30px;
     font-weight: 600;
@@ -2967,11 +2967,11 @@ iframe {
 }
 
 @media screen and (max-width: 768px) {
-    .automatic-typing-container {
+    .enhancement-container {
         flex-direction: column;
     }
 
-    .enhancement-automatic-typing,
+    .enhancement-content,
     .enhancement-video {
         flex: 1 1 100%;
     }
