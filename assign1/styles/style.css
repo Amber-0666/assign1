@@ -3041,6 +3041,18 @@ body {
     text-align: center;
 }
 
+.demo-video {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 20px auto;
+}
+  
+
 .enhancement-video p {
     font-size: 17px;
     margin-bottom: 15px;
@@ -3048,18 +3060,22 @@ body {
 }
 
 .enhancement-button {
-    margin-top: 15px;
-    padding: 12px 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block; 
+    padding: 14px 32px;
+    text-decoration: none;
     background-color: #754f1b;
     color: white;
-    border: none;
     border-radius: 12px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+  
 
 .enhancement-button:hover {
     background-color: #5c3e13;
