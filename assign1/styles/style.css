@@ -163,16 +163,18 @@
         padding: 80px 20px 20px;
         transition: right 0.3s ease;
         z-index: 99;
+        overflow-y: auto;
     }
     
     .nav-menu li {
         width: 100%;
-        margin: 10px 0;
+        margin: 8px 0;
     }
     
     .nav-menu li a {
         width: 100%;
-        padding: 12px 0;
+        padding: 12px 16px;
+        display: block;
     }
     
     .nav-dropdown-content {
@@ -180,6 +182,14 @@
         width: 100%;
         box-shadow: none;
         display: none;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        margin-top: 8px;
+        padding: 0 0 0 16px;
+    }
+    
+    .nav-dropdown-content a {
+        padding: 10px 16px !important;
     }
     
     .nav-dropdown:hover .nav-dropdown-content {
@@ -206,25 +216,51 @@
     .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
-}
 
-/* Make dropdowns clickable on mobile */
-@media (max-width: 992px) {
+    /* Make dropdowns clickable on mobile */
+    .nav-dropdown > .nav-dropbtn {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding-right: 30px;
+    }
+    
     .nav-dropdown > .nav-dropbtn::after {
         content: "+";
-        margin-left: 5px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2em;
+        transition: transform 0.2s ease;
     }
     
     .nav-toggle:checked ~ .nav-menu .nav-dropdown:focus-within > .nav-dropdown-content,
     .nav-toggle:checked ~ .nav-menu .nav-dropdown:hover > .nav-dropdown-content {
         display: block;
+        animation: fadeIn 0.3s ease;
     }
     
     .nav-toggle:checked ~ .nav-menu .nav-dropdown:focus-within > .nav-dropbtn::after {
         content: "-";
     }
-}
 
+    .nav-dropdown:focus-within > .nav-dropbtn::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* Animation for dropdown */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
 .index-hero {
     height: 100vh;
     background-image: linear-gradient(rgba(243,184,153, 0.3),rgba(243,184,153, 0.3)),url('images/background.jpg'); /* Add your background image */
@@ -1246,7 +1282,7 @@ input::placeholder {
 }
   
 .gallery-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.10);
 }
   
 .gallery-item img {
@@ -1439,8 +1475,8 @@ background: #444;
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 20px; /* adds space between the columns */
-    flex-wrap: wrap; /* makes it responsive */
+    gap: 20px; 
+    flex-wrap: wrap; 
     padding: 20px;
 }
 
@@ -1451,12 +1487,12 @@ background: #444;
 }
 
 .current-row .current-col img {
-    width: 100%;           /* Full width of the column */
-    height: auto;          /* Keeps the image's natural ratio */
-    max-width: 300px;      /* Optional: limits it from being too large */
+    width: 100%;           
+    height: auto;         
+    max-width: 300px;      
     display: block;
-    margin: 0 auto;        /* Centers the image */
-    border-radius: 10px;   /* Optional: make corners rounded */
+    margin: 0 auto;        
+    border-radius: 10px;   
 }
 
 .current-activities .current-row {
@@ -1467,7 +1503,7 @@ background: #444;
     background-color: #e7cdab;
     border-radius: 10px;
     padding: 20px;
-    flex: 1 1 30%; /* grow/shrink, min-width around 45% */
+    flex: 1 1 30%; 
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
@@ -1496,72 +1532,66 @@ background: #444;
     color: rgb(165, 42, 42);
 }
 
-.coming_soon-body-text {
-    text-align: center;
-    width: 100%;
+.coming_soon-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    padding: 20px;
 }
 
-.coming_soon-body-text h2 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    font-size: 35px;
-}
-
-
-.coming_soon-body-text img {
-    height:auto;
-    width: 100%;
-    padding-left:50px;
-    padding-right: 50px;
-    padding-top: 10px;
-}
-
-.coming_soon-body-text {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;;
-}
-
-.coming-text-wrapper {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.coming-wrapper-text {
+.coming_soon-row .coming_soon-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.coming_soon-row .coming_soon-col img {
+    width: 100%;           
+    height: auto;          
+    max-width: 300px;      
+    display: block;
+    margin: 0 auto;        
+    border-radius: 10px;   
+}
+
+.coming_soon-activities .coming_soon-row {
+    margin-top: 50px;
+}
+
+.coming_soon-col {
+    background-color: #e7cdab;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 30%; 
+    box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    width: 400px;
-    font-size: 40px;
+    justify-content: center;
+    max-width: 500px;
 }
 
-.coming-wrapper-text img {
-    width: 400px;
-    height: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
+.coming_soon-col h4 {
+    font-size: 3vmin;
+    color:brown;
+    margin: 10px auto;
 }
 
-.coming-text {
-    text-align: left;
-    margin-right: 400px;
-    padding-top: 100px;
-    width: 700px;
+.coming_soon-col p {
+    color:brown;
+    padding: 0px 50px;
+    padding-bottom: 30px;
 }
 
-.coming-text p {
-    font-size: 30px;
+.coming_soon-col a {
+    color: #a52a2a;
+    text-decoration: underline;
 }
 
+.coming_soon-col a:hover {
+    text-decoration: none;
+    color:#ff0000
+}
 /* End of Coming Soon Activities CSS file */
 
 
@@ -2595,6 +2625,7 @@ body {
     justify-content: space-between;
     transform: translate(0px);
     transition: 1.0s;
+    padding-left: 20px;
 }
 
 .product_selection a {
