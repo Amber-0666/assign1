@@ -1222,7 +1222,8 @@ input::placeholder {
 }
 
 .footer-social-links a,
-.footer-whatsapp a {
+.footer-whatsapp a,
+.footer-youtube a {
     display: inline-block;
     height: 35px;
     width: 35px;
@@ -1236,7 +1237,8 @@ input::placeholder {
 }
 
 .footer-social-links a:hover,
-.footer-whatsapp a:hover {
+.footer-whatsapp a:hover,
+.footer-youtube a:hover {
     background: #a52a2a;
     color: #fff;
 }
