@@ -892,6 +892,7 @@ header .subtitle {
     z-index: -1;
     display: flex;
     justify-content: center;
+    filter: brightness(83%);
 }
 
 .content-container-register {
@@ -2859,7 +2860,7 @@ body {
 
 /* Start of enhancement css file */
 .enhancement-title {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 42px;
     font-weight: 800;
     text-align: center;
@@ -2974,4 +2975,63 @@ iframe {
     iframe {
         width: 100%;
     }
+}
+/*End of enhancement css file*/
+
+/*Start of acknowledgement css file*/
+.acknowledgement {
+    padding: 60px 20px;
+    background-color: #f8e5cb;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+.acknowledgement h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    color: #a52a2a;
+}
+  
+.acknowledgement .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+  
+.acknowledgement .container > div {
+border-right: 5px solid #a52a2a;
+border-bottom: 5px solid #a52a2a;
+background-color: #ffffff;
+padding: 25px 20px;
+border-radius: 16px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.acknowledgement h3 {
+font-size: 20px;
+font-weight: 700;
+margin-bottom: 15px;
+color: #a52a2a;
+text-align: center;
+}
+
+.acknowledgement ol {
+padding-left: 20px;
+list-style: decimal inside;
+}
+
+.acknowledgement li {
+font-size: 15px;
+margin-bottom: 10px;
+word-break: break-all;
+color: #4a3b28;
+}
+
+.acknowledgement li::marker {
+color: #000000;
 }
