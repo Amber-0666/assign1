@@ -1299,7 +1299,7 @@ input::placeholder {
 }
 
 .past-col h4 {
-    font-size: 3vmin;
+    font-size: 30px;
     color:brown;
     margin: 10px auto;
 }
@@ -1659,10 +1659,6 @@ margin: 0 10px;
 
 .past3-container2 {
     margin-top: 400px;
-}
-
-.slider-left h3 {
-    text-align: center;
 }
 
 /* End of Pass Activities CSS file */
