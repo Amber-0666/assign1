@@ -1193,12 +1193,14 @@ input::placeholder {
     font-size: 16px;
     color: rgb(165, 42, 42);
     margin-bottom: 10px;
+    font-style: italic;
 }
 
 .footer_ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
+    font-style: italic;
 }
 
 .footer_ul li {
