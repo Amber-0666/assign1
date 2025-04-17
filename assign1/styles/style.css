@@ -3209,7 +3209,7 @@ body {
 
     .product_menu {
         width: 100vw;
-        max-height: auto;
+
         justify-content: center;
     }
 }
@@ -3225,14 +3225,22 @@ body {
     cursor: pointer;
 }
 
-.product_menu h2 {
-    font-size: 16.5px;
+.product_menu dl dt{
+    font-size: 1.8em;
     text-align: center;
+    font-weight: bold;
 }
 
-.product_menu h3 {
-    font-size: 20px;
+.product_menu dl dd:nth-child(2) {
+    font-size: 1.03em;
     text-align: center;
+    font-weight: bold;
+}
+
+.product_menu dl dd:nth-child(3) {
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: bold;
 }
 
 .product_menu hr{
@@ -3332,7 +3340,6 @@ body {
         width: 60%;
         max-width: 90vw;
         height: 90%;
-        line-height: 0.75 rem;
     }
 
     .pop_up_name {
