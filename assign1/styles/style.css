@@ -1163,6 +1163,7 @@ input::placeholder {
 .footer_container {
     max-width: 1200px;
     margin: 0 auto;
+    font-style: italic;
 }
 
 .footer_row {
