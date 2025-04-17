@@ -1136,7 +1136,6 @@ input::placeholder {
 
 .profile-button {
     background: #e7cdab;
-    color:brown;
     padding:10px;
     border-color: #f8e5cb;
     border-radius: 15px;
@@ -1145,8 +1144,14 @@ input::placeholder {
     margin: 20px;
 }
 
-.profile-button:hover{
+.profile-button a {
+    color: brown;
+    text-decoration: none;
+}
+
+.profile-button a:hover{
     cursor: pointer;
+    color: #ff0000;
 }
 /* End of Profile CSS file */
 
